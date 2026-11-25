@@ -1,0 +1,51 @@
+{
+  "project_code": "1190967",
+  "project_name": "LT86121_QFN88板",
+  "units": "mils",
+  "layers": 8,
+  "devicetype": "LT86121",
+  "packagesymbol": "QFN88-0_4-1",
+  "value": "LT86121",
+  "refdes": "U1",
+  "X": 1250.5,
+  "Y": 980.0,
+  "top_side": 1,
+  "pins": [
+    {
+      "pin_number": 88,
+      "padstack": "SMD32_8OB-S4",
+      "x": -195.67,
+      "y": -165.35,
+      "rotation": 0,
+      "figure_type": "OBLONG_X",
+      "width": 32.0,
+      "height": 8.0
+    },
+    {
+      "pin_number": "demo_custom",
+      "padstack": "PS_CUSTOM_THERMAL",
+      "x": 0,
+      "y": 50,
+      "rotation": 90,
+      "figure_type": "SHAPE",
+      "shape_name": "thermal_pad_v1",
+      "shapes": [
+        {
+          "shape": [
+            {"type": "segment", "x1": -50, "y1": -50, "x2": 50, "y2": -50},
+            {"type": "segment", "x1": 50, "y1": -50, "x2": 50, "y2": 50},
+            {"type": "arc", "start_x": 50, "start_y": 50, "end_x": -50, "end_y": 50, "center_x": 0, "center_y": 50, "radius": 50, "cw": 1},
+            {"type": "segment", "x1": -50, "y1": 50, "x2": -50, "y2": -50}
+          ],
+          "void": [
+            {"type": "polygon", "points": "-10,-10;10,-10;10,10;-10,10"}
+          ]
+        },
+        {
+          "shape": [{"type": "polygon", "points": "60,-5;80,-5;80,5;60,5"}],
+          "void": []
+        }
+      ]
+    }
+  ]
+}

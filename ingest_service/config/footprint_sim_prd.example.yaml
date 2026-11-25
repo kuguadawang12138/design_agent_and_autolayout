@@ -1,0 +1,62 @@
+# 复制为 footprint_sim_prd.yaml；环境由 deploy_env.yaml 的 env: prd 选用本文件
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: root
+  database: footprint_sim
+
+agent_paths:
+  brd: data/brd
+  logs: data/logs
+
+agent:
+  session_ttl_days: 7
+
+oa:
+  enabled: true
+  base: http://192.168.12.44
+  project_code_path: /api/third/resource/project_code
+  project_info_path: /api/third/resource/project_info
+  brd_path: /api/third/resource/download
+  timeout_sec: 120
+  allow_http_api: false
+
+oa_scheduler:
+  timezone: Asia/Shanghai
+  # 仅历史回补：跑完一天 chunk 后再拉下一天前等待（秒）；同一天内连续拉项目
+  oa_api_interval_sec: 10
+  max_projects_per_run: 0
+  history_backfill:
+    enabled: true
+    job_key: history_backfill
+    start_date: "2024-01-01"
+    end_date: "2024-12-31"
+    chunk_days: 1
+    disk_usage_max_ratio: 0.70
+    disk_wait_seconds: 120
+  # 增量与历史共用 run_oa_scheduler.py；历史跑完后可只开增量
+  incremental_enabled: false
+  incremental_lookback_days: 2
+  incremental_interval_days: 2
+  incremental_cron: "0 2 * * *"
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  uvicorn_workers: 4
+
+# 大字段外挂：fpgeom、source_json、project_pdf.file_content 只存路径
+# 目录按板子完成时间：年/月/日/唯一键文件名
+minio:
+  enabled: false
+  endpoint: 127.0.0.1:9000
+  access_key: minioadmin
+  secret_key: minioadmin
+  bucket: footprint
+  secure: false
+
+erkai_api:
+  brd_queue_max: 10
+  ingest_max_concurrent: 32

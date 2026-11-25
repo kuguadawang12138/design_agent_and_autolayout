@@ -1,0 +1,61 @@
+# 复制为 footprint_sim_st.yaml；环境由 deploy_env.yaml 的 env: st 选用本文件
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: root
+  database: footprint_sim
+
+agent_paths:
+  brd: data/brd
+  logs: data/logs
+
+agent:
+  session_ttl_days: 7
+
+oa:
+  enabled: true
+  base: http://192.168.12.44
+  project_code_path: /api/third/resource/project_code
+  project_info_path: /api/third/resource/project_info
+  brd_path: /api/third/resource/download
+  timeout_sec: 120
+  allow_http_api: true
+
+oa_scheduler:
+  timezone: Asia/Shanghai
+  # 仅历史回补：跑完一天 chunk 后再拉下一天前等待（秒）；同一天内连续拉项目
+  oa_api_interval_sec: 10
+  max_projects_per_run: 50
+  history_backfill:
+    enabled: true
+    job_key: history_backfill
+    start_date: "2020-08-15"
+    end_date: "2020-08-30"
+    chunk_days: 1
+    # 历史回补连续跑；BRD 目录所在磁盘占用超过该比例则等待 disk_wait_seconds 秒
+    disk_usage_max_ratio: 0.70
+    disk_wait_seconds: 120
+  incremental_enabled: false
+  incremental_lookback_days: 2
+  incremental_interval_days: 2
+  incremental_cron: "0 2 * * *"
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  uvicorn_workers: 4
+
+# 二开 HTTP：接口① BRD 串行+排队；接口②③ 并发
+erkai_api:
+  brd_queue_max: 10
+  ingest_max_concurrent: 32
+
+minio:
+  enabled: false
+  endpoint: 127.0.0.1:9000
+  access_key: minioadmin
+  secret_key: minioadmin
+  bucket: footprint
+  secure: false

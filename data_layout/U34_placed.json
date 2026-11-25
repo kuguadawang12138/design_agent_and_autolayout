@@ -1,0 +1,467 @@
+{
+  "method": "center",
+  "unit": "mil",
+  "grid_mil": 5.0,
+  "clearance_mil": 50.0,
+  "diag_extra_mil": 10.0,
+  "sym_window_mil": 50.0,
+  "metrics": {
+    "signal_hpwl_mil": 4453.4,
+    "signal_mst_mil": 3508.6,
+    "overlap": 0,
+    "clearance_mil": 50.78,
+    "symmetry_error_mil": 2.34,
+    "extra_ring_parts": 0,
+    "slides": 0
+  },
+  "components": [
+    {
+      "ref": "C181",
+      "layer": "TOP",
+      "x_mil": 2805.0,
+      "y_mil": 5095.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "7",
+        "MCU_NRST",
+        "T"
+      ]
+    },
+    {
+      "ref": "C182",
+      "layer": "BOTTOM",
+      "x_mil": 2655.0,
+      "y_mil": 4585.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "24",
+        "VCCMCU_3V3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C183",
+      "layer": "BOTTOM",
+      "x_mil": 3260.0,
+      "y_mil": 4905.0,
+      "rotation": 180.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "48",
+        "VCCMCU_3V3",
+        "R"
+      ]
+    },
+    {
+      "ref": "C184",
+      "layer": "BOTTOM",
+      "x_mil": 2655.0,
+      "y_mil": 4615.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "24",
+        "VCCMCU_3V3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C185",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4935.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "48",
+        "VCCMCU_3V3",
+        "R"
+      ]
+    },
+    {
+      "ref": "C186",
+      "layer": "TOP",
+      "x_mil": 3100.0,
+      "y_mil": 5095.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "5",
+        "MCU_OSC_IN",
+        "T"
+      ]
+    },
+    {
+      "ref": "C188",
+      "layer": "TOP",
+      "x_mil": 2900.0,
+      "y_mil": 5095.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "6",
+        "MCU_OSC_OUT",
+        "T"
+      ]
+    },
+    {
+      "ref": "FB16",
+      "layer": "TOP",
+      "x_mil": 2655.0,
+      "y_mil": 4655.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "24",
+        "VCCMCU_3V3",
+        "L"
+      ]
+    },
+    {
+      "ref": "R145",
+      "layer": "TOP",
+      "x_mil": 2760.0,
+      "y_mil": 5095.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "11",
+        "N16853204",
+        "T"
+      ]
+    },
+    {
+      "ref": "R146",
+      "layer": "TOP",
+      "x_mil": 2705.0,
+      "y_mil": 5095.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "12",
+        "N16852892",
+        "T"
+      ]
+    },
+    {
+      "ref": "R147",
+      "layer": "TOP",
+      "x_mil": 2655.0,
+      "y_mil": 4920.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "13",
+        "N17260449",
+        "L"
+      ]
+    },
+    {
+      "ref": "R148",
+      "layer": "TOP",
+      "x_mil": 2655.0,
+      "y_mil": 4865.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "14",
+        "N16852898",
+        "L"
+      ]
+    },
+    {
+      "ref": "R149",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4645.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "41",
+        "N18915205",
+        "R"
+      ]
+    },
+    {
+      "ref": "R150",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4700.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "42",
+        "USART0_TX",
+        "R"
+      ]
+    },
+    {
+      "ref": "R151",
+      "layer": "TOP",
+      "x_mil": 2655.0,
+      "y_mil": 4810.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "17",
+        "N16928666",
+        "L"
+      ]
+    },
+    {
+      "ref": "R152",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4755.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "43",
+        "USART0_RX",
+        "R"
+      ]
+    },
+    {
+      "ref": "R153",
+      "layer": "TOP",
+      "x_mil": 2850.0,
+      "y_mil": 4450.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "30",
+        "USART0_TX0",
+        "B"
+      ]
+    },
+    {
+      "ref": "R154",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4860.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "46",
+        "N16928329",
+        "R"
+      ]
+    },
+    {
+      "ref": "R155",
+      "layer": "TOP",
+      "x_mil": 2905.0,
+      "y_mil": 4450.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "31",
+        "USART0_RX0",
+        "B"
+      ]
+    },
+    {
+      "ref": "R156",
+      "layer": "TOP",
+      "x_mil": 2655.0,
+      "y_mil": 4705.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "21",
+        "N16928361",
+        "L"
+      ]
+    },
+    {
+      "ref": "R157",
+      "layer": "TOP",
+      "x_mil": 2960.0,
+      "y_mil": 4450.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "33",
+        "USART0_RTS",
+        "B"
+      ]
+    },
+    {
+      "ref": "R159",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4810.0,
+      "rotation": 180.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "44",
+        "MCU_BOOT0",
+        "R"
+      ]
+    },
+    {
+      "ref": "R160",
+      "layer": "TOP",
+      "x_mil": 2845.0,
+      "y_mil": 5095.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "7",
+        "MCU_NRST",
+        "T"
+      ]
+    },
+    {
+      "ref": "R162",
+      "layer": "TOP",
+      "x_mil": 3205.0,
+      "y_mil": 5095.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "1",
+        "MCU_VBAT",
+        "T"
+      ]
+    },
+    {
+      "ref": "R164",
+      "layer": "TOP",
+      "x_mil": 3125.0,
+      "y_mil": 4450.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "36",
+        "EE_SDA",
+        "B"
+      ]
+    },
+    {
+      "ref": "R168",
+      "layer": "TOP",
+      "x_mil": 3155.0,
+      "y_mil": 5095.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "5",
+        "MCU_OSC_IN",
+        "T"
+      ]
+    },
+    {
+      "ref": "R169",
+      "layer": "TOP",
+      "x_mil": 3260.0,
+      "y_mil": 4590.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "37",
+        "MCU_SWCLK",
+        "R"
+      ]
+    },
+    {
+      "ref": "R284",
+      "layer": "TOP",
+      "x_mil": 3015.0,
+      "y_mil": 4450.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "33",
+        "USART0_RTS",
+        "B"
+      ]
+    },
+    {
+      "ref": "R285",
+      "layer": "TOP",
+      "x_mil": 3070.0,
+      "y_mil": 4450.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "33",
+        "USART0_RTS",
+        "B"
+      ]
+    },
+    {
+      "ref": "R305",
+      "layer": "TOP",
+      "x_mil": 2655.0,
+      "y_mil": 4760.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "20",
+        "N17399405",
+        "L"
+      ]
+    },
+    {
+      "ref": "R312",
+      "layer": "TOP",
+      "x_mil": 2795.0,
+      "y_mil": 4450.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "27",
+        "N17438390",
+        "B"
+      ]
+    },
+    {
+      "ref": "Y2",
+      "layer": "TOP",
+      "x_mil": 3000.0,
+      "y_mil": 5095.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "5",
+        "MCU_OSC_IN",
+        "T"
+      ]
+    }
+  ]
+}

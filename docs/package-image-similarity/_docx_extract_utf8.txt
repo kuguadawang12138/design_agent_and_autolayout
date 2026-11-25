@@ -1,0 +1,92 @@
+0: [17babae4-54f0-44fa-a444-1068224df0ac] 20260820-封装形态相似比对实现方案
+1: [Normal] 一、需求背景
+2: [Normal] 封装工程师在 Cadence Allegro 中设计新板时，经常需要查找历史上形态相近的封装，以便复用焊盘栈、异形铜箔轮廓和已验证的布局经验。传统做法依赖人工记忆、数据库搜索或模糊匹配，存在效率低、易遗漏、难以快速定位最优参考等痛点。
+3: [Normal] 本次开发的封装比对子模块就是基于设计部提供的 Allegro 封装 JSON，将各 Pin 的铜箔形状还原为精确几何，再以几何 IoU 在历史库中检索形态最接近的封装。需要实现以下功能：
+4: [List Bullet] 1.接收设计部标准封装 JSON，解析参数化焊盘与异形 Shape 轮廓；
+5: [List Bullet] 2.将封装还原、归一化并缓存为 fpgeom 二进制格式，支持 PostgreSQL 历史库入库与去重；
+6: [List Bullet] 3.对查询封装与库内候选做 pin 数硬过滤后，全量计算几何 IoU（含 0/90/180/270° 旋转取最优），返回 Top-K 及来源板号；
+7: [List Bullet] 4.提供 HTTP REST 接口供 Agent / 上层系统调用，支持「先入库再检索」与多请求并发；
+8: [List Bullet] 5.比对结果可解释：返回 iou、best_rotation_deg、source_board 等字段，便于工程师复核。
+9: [Normal] 二、需求目标
+10: [Normal] 本模块负责“已有 Allegro 封装之间的形态相似检索”。目标是在内网环境下实现可工程化部署、秒级响应、结果可解释的封装比对能力。
+11: [List Bullet] 1.当前：JSON → fpgeom → PostgreSQL 入库；pin 硬过滤 + 几何 IoU 精排；FastAPI 接口 + 多进程 IoU 加速；
+12: [List Bullet] 2.待做：万级-百万库粗召回；除了pin数外还有什么可作封装匹配的过滤条件加入，加快筛选封装的速度。
+13: [Normal] 三、技术方案
+14: [Normal] 3.1 总体流程
+15: [Normal] 3.1.1 在线检索主路径
+16: [Normal] Agent/客户端上传查询 JSON →（可选）入库 → 构建query_fpgeom → SQL 按 pin_count 硬过滤 → 多进程并行计算iou → min_iou 阈值过滤 → Top-K 降序返回。
+17: [Normal] 3.1.2 离线与验证路径（已做）
+18: [Normal] 设计部 JSON 目录 → 批量还原 SVG/fpgeom → 目录内两两 IoU 对比（多进程），用于算法验收，不入库。
+19: [Normal] 3.2 几何 IoU 比对方案
+20: [Normal] 核心需求是“封装铜箔形态是否相近”，需要精确比较焊盘排列、异形轮廓与 void 挖空。选用 Shapely 精确多边形计算IoU；对候选封装尝试B相对A的4个90°旋转，取最大IoU。中间格式fpgeom采用msgpack序列化归一化多边形，文件（.fpgeom）与数据库BYTEA同格式，比对时不重复解析JSON。
+21: [Normal] 检索策略（yaml文件里面的配置）：
+22: [List Bullet] 1.pin_filter=true：仅与 pin_count 相同的库内记录比对；
+23: [List Bullet] 2.全量 IoU 精排后，丢弃 iou < min_iou 的结果；
+24: [List Bullet] 3.按 IoU 降序取 top_k；排除与查询同名同文件的记录。
+25: [Normal] 3.3 数据采集与入库
+26: [Normal] 3.3.1 数据来源
+27: [Normal] 由设计部从Allegro导出封装JSON。
+28: [Normal] 3.3.2 批量与在线入库
+29: [Normal] 离线批量：由我通过python统一导入入库；在线上传接口目前只支持单条：POST /api/v1/footprints/library。
+30: [Normal] 3.4 数据库选型
+31: [Normal] 历史封装库选用 PostgreSQL 14+，选型理由如下：
+33: [Normal] 3.5 数据库表设计（footprint_library）
+34: [Normal] 建表脚本见项目根目录 schema.sql，核心字段如下：
+36: [Normal] 设计原则：fpgeom BYTEA 不拆 pins/shapes 多表（比对热路径一次读出）；IoU 不预计算不入库；content_hash 保证同一封装不重复存储。
+37: [Normal] 3.6 形状还原与 fpgeom
+38: [Normal] 还原模块负责：
+39: [List Bullet] 1.加载 JSON，兼容非标准写法（如 "units":mils 无引号）；
+40: [List Bullet] 2.参数化 Figure（RECTANGLE、ROUNDED_RECTANGLE、DONUT、N_SIDED_POLYGON 等）按 Allegro 语义生成局部多边形；
+41: [List Bullet] 3.解析 shapes[] 中 segment、arc、polygon 及 void1/void2 挖空；
+42: [List Bullet] 4.按 pin 的 x/y/rotation 变换到封装坐标系，合并为几何岛列表；
+43: [List Bullet] 5.归一化平移缩放后写入 fpgeom，供 IoU 热路径直接 load。
+44: [Normal] 3.7 工程化落地
+45: [List Bullet] 1.Phase 0（已完成）：JSON 还原计算IoU；
+46: [List Bullet] 2.Phase 0.5（已完成）：PostgreSQL 建表、批量导入、调用尝试；
+47: [List Bullet] 3.Phase 1（已完成）：FastAPI接口；YAML 统一配置；多请求并发 + 共享 IoU 进程池。
+48: [Normal] 3.8 部署与服务接口
+49: [Normal] 服务层采用 FastAPI + uvicorn（Linux/Windows 均可）；比对为 CPU 密集几何计算，无需 GPU。
+50: [List Bullet] 1.GET /health — 健康检查与数据库连通性；
+51: [List Bullet] 2.GET /api/v1/footprints/settings — 读取当前 YAML 策略与并发配置；
+52: [List Bullet] 3.POST /api/v1/footprints/library — 上传 JSON，解析 fpgeom 并 UPSERT；
+53: [List Bullet] 4.POST /api/v1/footprints/similar — 上传查询 JSON，pin 过滤 + IoU Top-K；save_to_library=true 时先入库再检索。
+54: [Normal] 3.9 并发与性能
+55: [Normal] similar 接口支持多并发：max_concurrent_similar 限制同时检索请求数；共享 ProcessPoolExecutor 执行 IoU。128 核示例：可用 80 核、10 并发、每路约 8 进程。uvicorn_workers 必须保持 1。pin 过滤后候选数百条以内，多进程 IoU 为秒级。
+56: [Normal] 3.10 部署环境
+57: [List Bullet] 1.开发/验证：Windows 10+ 或 Linux；Python 3.10+；依赖见 requirements.txt；
+58: [List Bullet] 2.数据库：PostgreSQL 14+，连接与安装路径配置于 config/footprint_sim.yaml；
+59: [List Bullet] 3.生产：Linux 多核 CPU；python run_api.py ；
+60: [List Bullet] 4.与 Allegro 关系：输入为设计部 JSON，输出为相似历史封装列表。
+61: [Normal] 3.11验收标准
+62: [List Bullet] 1.PostgreSQL footprint_library 建表成功，样本库可批量导入；
+63: [List Bullet] 2.POST /similar 对 QFN88 查询返回 pin 数一致候选并按 IoU 降序；
+64: [List Bullet] 3.fpgeom 文件与库内 BYTEA 格式一致；
+65: [List Bullet] 4.10 路并发 similar 请求稳定；
+66: [List Bullet] 5.设计部 JSON 字段与字段清单一致，warnings 可提示缺字段。
+---TABLES---
+Table 0:
+对比项 | PostgreSQL（选用） | 说明
+结构化查询 | 支持 | pin_count 硬过滤走 B-tree 索引，SQL WHERE pin_count = ? 毫秒级
+二进制大对象 | BYTEA 原生支持 | fpgeom 为 msgpack 二进制，一次读出即可 IoU，无需拆多表
+JSON 归档 | JSONB + GIN 可选 | source_json 保留原始 JSON，便于审计、重导、算法升级重算
+去重与 UPSERT | 唯一索引 content_hash | 同一 JSON 内容 sha256 去重，支持 insert/update
+扩展性 | 千~百万行可扩展 | 当前全量 IoU 精排；二期可加粗召回索引列，无需换库
+部署成熟度 | 内网常用、运维熟悉 | 与其它模块统一 PostgreSQL 技术栈
+IoU 不入库 | 查询时现场计算 | 相似度随 query 变化，算法迭代无需刷 N² 关系表
+Table 1:
+字段名 | 类型 | 说明
+id | BIGSERIAL PK | 自增主键
+name | VARCHAR(512) | 封装名称，通常与 JSON 文件名一致
+pin_count | INTEGER | 引脚数，硬过滤字段，建索引 idx_footprint_pin_count
+units | VARCHAR(32) | 长度单位，默认 mils
+bbox_min_x / bbox_min_y | DOUBLE PRECISION | 归一化前封装包围盒左下角
+bbox_max_x / bbox_max_y | DOUBLE PRECISION | 归一化前封装包围盒右上角
+fpgeom_version | SMALLINT | fpgeom 格式版本，当前默认 1
+fpgeom | BYTEA NOT NULL | FPGM 头 + msgpack 归一化多边形，比对热路径直接 load
+content_hash | CHAR(64) UNIQUE | 源 JSON 文件 sha256，去重，建唯一索引
+source_file | VARCHAR(512) | 原始 JSON 文件名
+source_board | VARCHAR(128) | 来源板号，如 1190967，建索引便于溯源
+source_json | JSONB | 原始 JSON 全文归档
+warnings | JSONB | 解析/还原过程中的告警列表，默认 []
+geom_islands | INTEGER | 几何岛数量（通常与有效 pin 形状数相关）
+created_at / updated_at | TIMESTAMPTZ | 入库与更新时间

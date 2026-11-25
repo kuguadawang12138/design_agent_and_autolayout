@@ -1,0 +1,92 @@
+0: [17babae4-54f0-44fa-a444-1068224df0ac] 20260820-灏佽褰㈡€佺浉浼兼瘮瀵瑰疄鐜版柟妗?
+1: [Normal] 涓€銆侀渶姹傝儗鏅?
+2: [Normal] 灏佽宸ョ▼甯堝湪 Cadence Allegro 涓璁℃柊鏉挎椂锛岀粡甯搁渶瑕佹煡鎵惧巻鍙蹭笂褰㈡€佺浉杩戠殑灏佽锛屼互渚垮鐢ㄧ剨鐩樻爤銆佸紓褰㈤摐绠旇疆寤撳拰宸查獙璇佺殑甯冨眬缁忛獙銆備紶缁熷仛娉曚緷璧栦汉宸ヨ蹇嗐€佹暟鎹簱鎼滅储鎴栨ā绯婂尮閰嶏紝瀛樺湪鏁堢巼浣庛€佹槗閬楁紡銆侀毦浠ュ揩閫熷畾浣嶆渶浼樺弬鑰冪瓑鐥涚偣銆?
+3: [Normal] 鏈寮€鍙戠殑灏佽姣斿瀛愭ā鍧楀氨鏄熀浜庤璁￠儴鎻愪緵鐨?Allegro 灏佽 JSON锛屽皢鍚?Pin 鐨勯摐绠斿舰鐘惰繕鍘熶负绮剧‘鍑犱綍锛屽啀浠ュ嚑浣?IoU 鍦ㄥ巻鍙插簱涓绱㈠舰鎬佹渶鎺ヨ繎鐨勫皝瑁呫€傞渶瑕佸疄鐜颁互涓嬪姛鑳斤細
+4: [List Bullet] 1.鎺ユ敹璁捐閮ㄦ爣鍑嗗皝瑁?JSON锛岃В鏋愬弬鏁板寲鐒婄洏涓庡紓褰?Shape 杞粨锛?
+5: [List Bullet] 2.灏嗗皝瑁呰繕鍘熴€佸綊涓€鍖栧苟缂撳瓨涓?fpgeom 浜岃繘鍒舵牸寮忥紝鏀寔 PostgreSQL 鍘嗗彶搴撳叆搴撲笌鍘婚噸锛?
+6: [List Bullet] 3.瀵规煡璇㈠皝瑁呬笌搴撳唴鍊欓€夊仛 pin 鏁扮‖杩囨护鍚庯紝鍏ㄩ噺璁＄畻鍑犱綍 IoU锛堝惈 0/90/180/270掳 鏃嬭浆鍙栨渶浼橈級锛岃繑鍥?Top-K 鍙婃潵婧愭澘鍙凤紱
+7: [List Bullet] 4.鎻愪緵 HTTP REST 鎺ュ彛渚?Agent / 涓婂眰绯荤粺璋冪敤锛屾敮鎸併€屽厛鍏ュ簱鍐嶆绱€嶄笌澶氳姹傚苟鍙戯紱
+8: [List Bullet] 5.姣斿缁撴灉鍙В閲婏細杩斿洖 iou銆乥est_rotation_deg銆乻ource_board 绛夊瓧娈碉紝渚夸簬宸ョ▼甯堝鏍搞€?
+9: [Normal] 浜屻€侀渶姹傜洰鏍?
+10: [Normal] 鏈ā鍧楄礋璐ｂ€滃凡鏈?Allegro 灏佽涔嬮棿鐨勫舰鎬佺浉浼兼绱⑩€濄€傜洰鏍囨槸鍦ㄥ唴缃戠幆澧冧笅瀹炵幇鍙伐绋嬪寲閮ㄧ讲銆佺绾у搷搴斻€佺粨鏋滃彲瑙ｉ噴鐨勫皝瑁呮瘮瀵硅兘鍔涖€?
+11: [List Bullet] 1.褰撳墠锛欽SON 鈫?fpgeom 鈫?PostgreSQL 鍏ュ簱锛沺in 纭繃婊?+ 鍑犱綍 IoU 绮炬帓锛汧astAPI 鎺ュ彛 + 澶氳繘绋?IoU 鍔犻€燂紱
+12: [List Bullet] 2.寰呭仛锛氫竾绾?鐧句竾搴撶矖鍙洖锛涢櫎浜唒in鏁板杩樻湁浠€涔堝彲浣滃皝瑁呭尮閰嶇殑杩囨护鏉′欢鍔犲叆锛屽姞蹇瓫閫夊皝瑁呯殑閫熷害銆?
+13: [Normal] 涓夈€佹妧鏈柟妗?
+14: [Normal] 3.1 鎬讳綋娴佺▼
+15: [Normal] 3.1.1 鍦ㄧ嚎妫€绱富璺緞
+16: [Normal] Agent/瀹㈡埛绔笂浼犳煡璇?JSON 鈫掞紙鍙€夛級鍏ュ簱 鈫?鏋勫缓query_fpgeom 鈫?SQL 鎸?pin_count 纭繃婊?鈫?澶氳繘绋嬪苟琛岃绠梚ou 鈫?min_iou 闃堝€艰繃婊?鈫?Top-K 闄嶅簭杩斿洖銆?
+17: [Normal] 3.1.2 绂荤嚎涓庨獙璇佽矾寰勶紙宸插仛锛?
+18: [Normal] 璁捐閮?JSON 鐩綍 鈫?鎵归噺杩樺師 SVG/fpgeom 鈫?鐩綍鍐呬袱涓?IoU 瀵规瘮锛堝杩涚▼锛夛紝鐢ㄤ簬绠楁硶楠屾敹锛屼笉鍏ュ簱銆?
+19: [Normal] 3.2 鍑犱綍 IoU 姣斿鏂规
+20: [Normal] 鏍稿績闇€姹傛槸鈥滃皝瑁呴摐绠斿舰鎬佹槸鍚︾浉杩戔€濓紝闇€瑕佺簿纭瘮杈冪剨鐩樻帓鍒椼€佸紓褰㈣疆寤撲笌 void 鎸栫┖銆傞€夌敤 Shapely 绮剧‘澶氳竟褰㈣绠桰oU锛涘鍊欓€夊皝瑁呭皾璇旴鐩稿A鐨?涓?0掳鏃嬭浆锛屽彇鏈€澶oU銆備腑闂存牸寮廸pgeom閲囩敤msgpack搴忓垪鍖栧綊涓€鍖栧杈瑰舰锛屾枃浠讹紙.fpgeom锛変笌鏁版嵁搴揃YTEA鍚屾牸寮忥紝姣斿鏃朵笉閲嶅瑙ｆ瀽JSON銆?
+21: [Normal] 妫€绱㈢瓥鐣ワ紙yaml鏂囦欢閲岄潰鐨勯厤缃級锛?
+22: [List Bullet] 1.pin_filter=true锛氫粎涓?pin_count 鐩稿悓鐨勫簱鍐呰褰曟瘮瀵癸紱
+23: [List Bullet] 2.鍏ㄩ噺 IoU 绮炬帓鍚庯紝涓㈠純 iou < min_iou 鐨勭粨鏋滐紱
+24: [List Bullet] 3.鎸?IoU 闄嶅簭鍙?top_k锛涙帓闄や笌鏌ヨ鍚屽悕鍚屾枃浠剁殑璁板綍銆?
+25: [Normal] 3.3 鏁版嵁閲囬泦涓庡叆搴?
+26: [Normal] 3.3.1 鏁版嵁鏉ユ簮
+27: [Normal] 鐢辫璁￠儴浠嶢llegro瀵煎嚭灏佽JSON銆?
+28: [Normal] 3.3.2 鎵归噺涓庡湪绾垮叆搴?
+29: [Normal] 绂荤嚎鎵归噺锛氱敱鎴戦€氳繃python缁熶竴瀵煎叆鍏ュ簱锛涘湪绾夸笂浼犳帴鍙ｇ洰鍓嶅彧鏀寔鍗曟潯锛歅OST /api/v1/footprints/library銆?
+30: [Normal] 3.4 鏁版嵁搴撻€夊瀷
+31: [Normal] 鍘嗗彶灏佽搴撻€夌敤 PostgreSQL 14+锛岄€夊瀷鐞嗙敱濡備笅锛?
+33: [Normal] 3.5 鏁版嵁搴撹〃璁捐锛坒ootprint_library锛?
+34: [Normal] 寤鸿〃鑴氭湰瑙侀」鐩牴鐩綍 schema.sql锛屾牳蹇冨瓧娈靛涓嬶細
+36: [Normal] 璁捐鍘熷垯锛歠pgeom BYTEA 涓嶆媶 pins/shapes 澶氳〃锛堟瘮瀵圭儹璺緞涓€娆¤鍑猴級锛汭oU 涓嶉璁＄畻涓嶅叆搴擄紱content_hash 淇濊瘉鍚屼竴灏佽涓嶉噸澶嶅瓨鍌ㄣ€?
+37: [Normal] 3.6 褰㈢姸杩樺師涓?fpgeom
+38: [Normal] 杩樺師妯″潡璐熻矗锛?
+39: [List Bullet] 1.鍔犺浇 JSON锛屽吋瀹归潪鏍囧噯鍐欐硶锛堝 "units":mils 鏃犲紩鍙凤級锛?
+40: [List Bullet] 2.鍙傛暟鍖?Figure锛圧ECTANGLE銆丷OUNDED_RECTANGLE銆丏ONUT銆丯_SIDED_POLYGON 绛夛級鎸?Allegro 璇箟鐢熸垚灞€閮ㄥ杈瑰舰锛?
+41: [List Bullet] 3.瑙ｆ瀽 shapes[] 涓?segment銆乤rc銆乸olygon 鍙?void1/void2 鎸栫┖锛?
+42: [List Bullet] 4.鎸?pin 鐨?x/y/rotation 鍙樻崲鍒板皝瑁呭潗鏍囩郴锛屽悎骞朵负鍑犱綍宀涘垪琛紱
+43: [List Bullet] 5.褰掍竴鍖栧钩绉荤缉鏀惧悗鍐欏叆 fpgeom锛屼緵 IoU 鐑矾寰勭洿鎺?load銆?
+44: [Normal] 3.7 宸ョ▼鍖栬惤鍦?
+45: [List Bullet] 1.Phase 0锛堝凡瀹屾垚锛夛細JSON 杩樺師璁＄畻IoU锛?
+46: [List Bullet] 2.Phase 0.5锛堝凡瀹屾垚锛夛細PostgreSQL 寤鸿〃銆佹壒閲忓鍏ャ€佽皟鐢ㄥ皾璇曪紱
+47: [List Bullet] 3.Phase 1锛堝凡瀹屾垚锛夛細FastAPI鎺ュ彛锛沋AML 缁熶竴閰嶇疆锛涘璇锋眰骞跺彂 + 鍏变韩 IoU 杩涚▼姹犮€?
+48: [Normal] 3.8 閮ㄧ讲涓庢湇鍔℃帴鍙?
+49: [Normal] 鏈嶅姟灞傞噰鐢?FastAPI + uvicorn锛圠inux/Windows 鍧囧彲锛夛紱姣斿涓?CPU 瀵嗛泦鍑犱綍璁＄畻锛屾棤闇€ GPU銆?
+50: [List Bullet] 1.GET /health 鈥?鍋ュ悍妫€鏌ヤ笌鏁版嵁搴撹繛閫氭€э紱
+51: [List Bullet] 2.GET /api/v1/footprints/settings 鈥?璇诲彇褰撳墠 YAML 绛栫暐涓庡苟鍙戦厤缃紱
+52: [List Bullet] 3.POST /api/v1/footprints/library 鈥?涓婁紶 JSON锛岃В鏋?fpgeom 骞?UPSERT锛?
+53: [List Bullet] 4.POST /api/v1/footprints/similar 鈥?涓婁紶鏌ヨ JSON锛宲in 杩囨护 + IoU Top-K锛泂ave_to_library=true 鏃跺厛鍏ュ簱鍐嶆绱€?
+54: [Normal] 3.9 骞跺彂涓庢€ц兘
+55: [Normal] similar 鎺ュ彛鏀寔澶氬苟鍙戯細max_concurrent_similar 闄愬埗鍚屾椂妫€绱㈣姹傛暟锛涘叡浜?ProcessPoolExecutor 鎵ц IoU銆?28 鏍哥ず渚嬶細鍙敤 80 鏍搞€?0 骞跺彂銆佹瘡璺害 8 杩涚▼銆倁vicorn_workers 蹇呴』淇濇寔 1銆俻in 杩囨护鍚庡€欓€夋暟鐧炬潯浠ュ唴锛屽杩涚▼ IoU 涓虹绾с€?
+56: [Normal] 3.10 閮ㄧ讲鐜
+57: [List Bullet] 1.寮€鍙?楠岃瘉锛歐indows 10+ 鎴?Linux锛汸ython 3.10+锛涗緷璧栬 requirements.txt锛?
+58: [List Bullet] 2.鏁版嵁搴擄細PostgreSQL 14+锛岃繛鎺ヤ笌瀹夎璺緞閰嶇疆浜?config/footprint_sim.yaml锛?
+59: [List Bullet] 3.鐢熶骇锛歀inux 澶氭牳 CPU锛沺ython run_api.py 锛?
+60: [List Bullet] 4.涓?Allegro 鍏崇郴锛氳緭鍏ヤ负璁捐閮?JSON锛岃緭鍑轰负鐩镐技鍘嗗彶灏佽鍒楄〃銆?
+61: [Normal] 3.11楠屾敹鏍囧噯
+62: [List Bullet] 1.PostgreSQL footprint_library 寤鸿〃鎴愬姛锛屾牱鏈簱鍙壒閲忓鍏ワ紱
+63: [List Bullet] 2.POST /similar 瀵?QFN88 鏌ヨ杩斿洖 pin 鏁颁竴鑷村€欓€夊苟鎸?IoU 闄嶅簭锛?
+64: [List Bullet] 3.fpgeom 鏂囦欢涓庡簱鍐?BYTEA 鏍煎紡涓€鑷达紱
+65: [List Bullet] 4.10 璺苟鍙?similar 璇锋眰绋冲畾锛?
+66: [List Bullet] 5.璁捐閮?JSON 瀛楁涓庡瓧娈垫竻鍗曚竴鑷达紝warnings 鍙彁绀虹己瀛楁銆?
+---TABLES---
+Table 0:
+瀵规瘮椤?| PostgreSQL锛堥€夌敤锛?| 璇存槑
+缁撴瀯鍖栨煡璇?| 鏀寔 | pin_count 纭繃婊よ蛋 B-tree 绱㈠紩锛孲QL WHERE pin_count = ? 姣绾?
+浜岃繘鍒跺ぇ瀵硅薄 | BYTEA 鍘熺敓鏀寔 | fpgeom 涓?msgpack 浜岃繘鍒讹紝涓€娆¤鍑哄嵆鍙?IoU锛屾棤闇€鎷嗗琛?
+JSON 褰掓。 | JSONB + GIN 鍙€?| source_json 淇濈暀鍘熷 JSON锛屼究浜庡璁°€侀噸瀵笺€佺畻娉曞崌绾ч噸绠?
+鍘婚噸涓?UPSERT | 鍞竴绱㈠紩 content_hash | 鍚屼竴 JSON 鍐呭 sha256 鍘婚噸锛屾敮鎸?insert/update
+鎵╁睍鎬?| 鍗儈鐧句竾琛屽彲鎵╁睍 | 褰撳墠鍏ㄩ噺 IoU 绮炬帓锛涗簩鏈熷彲鍔犵矖鍙洖绱㈠紩鍒楋紝鏃犻渶鎹㈠簱
+閮ㄧ讲鎴愮啛搴?| 鍐呯綉甯哥敤銆佽繍缁寸啛鎮?| 涓庡叾瀹冩ā鍧楃粺涓€ PostgreSQL 鎶€鏈爤
+IoU 涓嶅叆搴?| 鏌ヨ鏃剁幇鍦鸿绠?| 鐩镐技搴﹂殢 query 鍙樺寲锛岀畻娉曡凯浠ｆ棤闇€鍒?N虏 鍏崇郴琛?
+Table 1:
+瀛楁鍚?| 绫诲瀷 | 璇存槑
+id | BIGSERIAL PK | 鑷涓婚敭
+name | VARCHAR(512) | 灏佽鍚嶇О锛岄€氬父涓?JSON 鏂囦欢鍚嶄竴鑷?
+pin_count | INTEGER | 寮曡剼鏁帮紝纭繃婊ゅ瓧娈碉紝寤虹储寮?idx_footprint_pin_count
+units | VARCHAR(32) | 闀垮害鍗曚綅锛岄粯璁?mils
+bbox_min_x / bbox_min_y | DOUBLE PRECISION | 褰掍竴鍖栧墠灏佽鍖呭洿鐩掑乏涓嬭
+bbox_max_x / bbox_max_y | DOUBLE PRECISION | 褰掍竴鍖栧墠灏佽鍖呭洿鐩掑彸涓婅
+fpgeom_version | SMALLINT | fpgeom 鏍煎紡鐗堟湰锛屽綋鍓嶉粯璁?1
+fpgeom | BYTEA NOT NULL | FPGM 澶?+ msgpack 褰掍竴鍖栧杈瑰舰锛屾瘮瀵圭儹璺緞鐩存帴 load
+content_hash | CHAR(64) UNIQUE | 婧?JSON 鏂囦欢 sha256锛屽幓閲嶏紝寤哄敮涓€绱㈠紩
+source_file | VARCHAR(512) | 鍘熷 JSON 鏂囦欢鍚?
+source_board | VARCHAR(128) | 鏉ユ簮鏉垮彿锛屽 1190967锛屽缓绱㈠紩渚夸簬婧簮
+source_json | JSONB | 鍘熷 JSON 鍏ㄦ枃褰掓。
+warnings | JSONB | 瑙ｆ瀽/杩樺師杩囩▼涓殑鍛婅鍒楄〃锛岄粯璁?[]
+geom_islands | INTEGER | 鍑犱綍宀涙暟閲忥紙閫氬父涓庢湁鏁?pin 褰㈢姸鏁扮浉鍏筹級
+created_at / updated_at | TIMESTAMPTZ | 鍏ュ簱涓庢洿鏂版椂闂?

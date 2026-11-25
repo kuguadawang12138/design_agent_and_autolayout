@@ -1,0 +1,151 @@
+================================================================================
+给二开脚本 — 接口说明（v2.2）
+更新：2026-09-14
+入库服务：ingest_service → python run_ingest_app.py（默认示例 http://0.0.0.0:8000，入库专用机）
+检索服务：search_service → python run_search_app.py（默认示例 http://0.0.0.0:8000，检索专用机）
+Word 版：仓库根目录《明工接口文档-v2.2-自动轮询版.docx》
+================================================================================
+
+〇、接口调用原则（必读）
+--------------------------------------------------------------------------------
+解析与入库全部成功时，禁止调用 POST /api/v1/ingest/failure，以节省资源。
+
+推荐路径：
+  GET /api/v1/brd/next → 本地解析成功 → 仅 POST /api/v1/ingest → 结束
+
+仅在以下情况调用失败上报接口：
+  • BRD 无法打开、Allegro/脚本解析失败，无法生成任何可上传 JSON；
+  • 或项目级不可恢复错误，根本无法完成接口二。
+
+不要调用失败上报接口的情况：
+  • 接口二 fail_count=0（全部成功）；
+  • 接口二部分失败（看 errors 即可，服务端已写 ingest_failure）；
+  • 仅 PDF 校准/入库失败（接口二 response 的 message/errors 已说明）。
+
+一、约定
+--------------------------------------------------------------------------------
+1. 接口二响应 ok：
+   - 至少 1 个器件 JSON 成功入库 → ok=true（HTTP 200）；若有其它文件失败则 fail_count>0 且带 message。
+   - 全部 JSON 均未入库 → ok=false（HTTP 400），message 说明首条原因。
+2. 单器件失败（含 pin 读不出、铜箔无法还原、缺 padstack 等）：该 JSON **不入库**，写入 errors；
+   服务端记入 ingest_failure，**无需**再调接口三。
+3. 入库唯一键：
+   - 器件 footprint_library → project_code + refdes（同项目重入库时先删旧再插新）
+   - PDF project_pdf → project_code + top_side（boolean/TINYINT：1 正面 0 反面，每项目正/反各一份）
+   - 失败 ingest_failure：
+       二开接口三 / BRD 脚本失败 → project_code（refdes 留空串 ''）
+       JSON/形态/PDF 失败 → 接口二内自动写入（无需再调接口三）
+4. 形态检索与入库分离：检索服务只读 MySQL；二开只对接入库服务。
+5. 入库成功后服务端按位号烘焙高亮 PDF（footprint_library.highlight_pdf），二开无需处理。
+
+二、错误码（ingest_failure.error_code）
+--------------------------------------------------------------------------------
+  ERR_SCRIPT       二开脚本/BRD 解析上报（/api/v1/ingest/failure）
+  ERR_JSON_FORMAT  JSON 无法解析（接口二内自动记录）
+  ERR_JSON_FIELD   JSON 缺字段或格式不合格
+  ERR_FPGEOM       形态 fpgeom 入库失败
+  ERR_PDF          PDF 入库或校准失败
+
+三、接口 1 — 拉取 BRD（二开轮询）
+--------------------------------------------------------------------------------
+GET /api/v1/brd/next   （入库服务）
+
+说明：
+  - 从 data/brd/ 目录取最早的一个 {project_code}.brd
+  - 返回文件流后**立即删除**该 BRD，避免重复处理
+  - 无文件时返回 JSON（HTTP 200，不是 204）：
+    {"ok": false, "message": "暂无待处理的 BRD 文件"}
+
+成功响应：
+  Content-Type: application/octet-stream
+  Header: X-Project-Code: 1188009
+  Body: BRD 二进制
+
+二开脚本伪代码：
+  resp = GET /api/v1/brd/next
+  if resp.json and resp.json.message:
+      sleep(30); continue
+  save(resp.content); parse_brd(...)
+  # 成功 → POST /api/v1/ingest；失败 → POST /api/v1/ingest/failure
+
+四、接口 2 — 回传入库 JSON + PDF（同一接口）
+--------------------------------------------------------------------------------
+POST /api/v1/ingest   （入库服务）
+Content-Type: multipart/form-data
+
+表单字段：
+  project_code  可选，可从 JSON 顶层 project_code 识别
+  json_files[]  必填，一个或多个器件 JSON（一文件一器件）
+  pdf_files[]   可选，板级 PDF（建议文件名含 top/bottom 或正/反面区分）
+
+处理流程：
+  1. 校验 JSON（project_code、refdes、pins[] 非空及 pin 必填字段）
+  2. 同 project_code 整项目删除旧数据（仅当存在至少 1 条通过校验的 JSON）
+  3. 逐条形态 fpgeom 入库；任一脚 pin 无法还原完整铜箔则 **该位号跳过不入库**
+  4. PDF 按 project_code + top_side 存板级二进制
+  5. 按位号烘焙高亮 PDF/预览图（检索直读，二开无感）
+
+PDF 校准：PDF 中需有 Eda_{位号} 文本；JSON 同面至少 2 个位号含 X/Y（pcb 坐标）。
+
+成功响应示例（无 message）：
+{
+  "ok": true,
+  "project_code": "1188009",
+  "ok_count": 120,
+  "fail_count": 0,
+  "pdf_count": 2,
+  "errors": []
+}
+
+部分失败响应（ok 仍为 true，HTTP 200；失败位号不在库中，无需调接口三）：
+{
+  "ok": true,
+  "message": "部分失败 2 条，详见 errors",
+  "ok_count": 118,
+  "fail_count": 2,
+  "errors": [{"file": "U1.json", "refdes": "U1", "error": "pin 3: 未生成有效铜箔轮廓"}]
+}
+
+全部失败响应（ok=false，HTTP 400）：
+{
+  "ok": false,
+  "message": "pins[0] 缺少 padstack",
+  "ok_count": 0,
+  "fail_count": 1,
+  "errors": [{"file": "U1.json", "error": "pins[0] 缺少 padstack"}]
+}
+
+五、接口 3 — 解析失败上报（仅 BRD/脚本级失败时调用）
+--------------------------------------------------------------------------------
+POST /api/v1/ingest/failure   （入库服务）
+Content-Type: multipart/form-data
+
+表单字段：
+  message       必填，失败原因全文
+  project_code  必填
+  refdes        可选；BRD/板级失败留空
+
+说明：
+  - 仅当无法完成接口二时使用（见上文「调用原则」）
+  - 写入 ingest_failure，error_code=ERR_SCRIPT
+
+成功响应（无 message）：
+{"ok": true}
+
+六、接口 4 — 当前板 JSON 上传（检索服务，二开可忽略）
+--------------------------------------------------------------------------------
+POST /api/v1/board/json   （search_service，默认 :8000）
+
+说明：EDA 会话用，格式校验 + 暂存 data/sessions/，不写 footprint_library。
+
+七、对接顺序
+--------------------------------------------------------------------------------
+1. OA 将 BRD 写入入库队列
+2. 二开轮询接口 1
+3. 解析成功 → 仅接口 2；fail_count=0 则结束
+4. BRD 解析彻底失败 → 仅接口 3
+5. 检索服务读库展示，二开不参与
+
+附录：GET /api/health → {"ok": true, "service": "ingest"}
+
+================================================================================

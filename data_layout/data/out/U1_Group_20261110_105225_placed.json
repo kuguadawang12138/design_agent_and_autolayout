@@ -1,0 +1,5381 @@
+{
+  "method": "center",
+  "unit": "mil",
+  "grid": 5.0,
+  "clearance": 50.0,
+  "diag_slack": 0.08,
+  "sym_window": 50.0,
+  "metrics": {
+    "signal_hpwl": 103683.149,
+    "signal_mst": 76670.879,
+    "overlap": 0,
+    "clearance": 50.405,
+    "symmetry_error": 2.251,
+    "extra_ring_parts": 106,
+    "slides": 5
+  },
+  "components": [
+    {
+      "ref": "C1",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25760.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "L3",
+        "CPU_SWT_PCIE0_C_P_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C10",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24525.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "V4",
+        "CPU_SWT_PCIE2_C_N_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C100",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25085.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C101",
+      "layer": "TOP",
+      "x": -6250.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C102",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24540.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C103",
+      "layer": "TOP",
+      "x": -5960.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C104",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25100.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C105",
+      "layer": "TOP",
+      "x": -6235.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C106",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24555.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C107",
+      "layer": "TOP",
+      "x": -5945.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C108",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25125.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C109",
+      "layer": "TOP",
+      "x": -6210.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C11",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24465.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "Y5",
+        "CPU_SWT_PCIE2_C_P_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C110",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24580.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C111",
+      "layer": "TOP",
+      "x": -5920.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C112",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24310.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C113",
+      "layer": "TOP",
+      "x": -6180.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C114",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24610.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C115",
+      "layer": "TOP",
+      "x": -5890.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C116",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24340.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C117",
+      "layer": "TOP",
+      "x": -6150.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C118",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24640.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C119",
+      "layer": "TOP",
+      "x": -5860.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C12",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24495.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "W5",
+        "CPU_SWT_PCIE2_C_N_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C120",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24370.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C121",
+      "layer": "TOP",
+      "x": -6120.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C128",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25835.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C129",
+      "layer": "TOP",
+      "x": -5460.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AD23",
+        "GND",
+        "B"
+      ]
+    },
+    {
+      "ref": "C13",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24435.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AA6",
+        "CPU_SWT_PCIE2_C_P_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C130",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25360.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C131",
+      "layer": "TOP",
+      "x": -5120.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C132",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24670.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C133",
+      "layer": "TOP",
+      "x": -5830.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C134",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24400.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C135",
+      "layer": "TOP",
+      "x": -6090.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C136",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24700.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C137",
+      "layer": "TOP",
+      "x": -5800.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C138",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24430.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C139",
+      "layer": "TOP",
+      "x": -6060.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C14",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24480.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "Y7",
+        "CPU_SWT_PCIE2_C_N_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C140",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24730.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C141",
+      "layer": "TOP",
+      "x": -5770.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C142",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24460.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C143",
+      "layer": "TOP",
+      "x": -6030.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C144",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24760.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C145",
+      "layer": "TOP",
+      "x": -5740.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C146",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25390.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C147",
+      "layer": "TOP",
+      "x": -5090.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C148",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25865.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C15",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24420.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AB8",
+        "CPU_SWT_PCIE2_C_P_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C150",
+      "layer": "TOP",
+      "x": -5715.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C151",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25420.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C152",
+      "layer": "TOP",
+      "x": -6015.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C153",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25280.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C154",
+      "layer": "TOP",
+      "x": -5505.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AR13",
+        "POS0V75_S0",
+        "B"
+      ]
+    },
+    {
+      "ref": "C155",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25450.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C156",
+      "layer": "TOP",
+      "x": -6425.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C157",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25630.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M10",
+        "POS1V0_VDDSOC",
+        "L"
+      ]
+    },
+    {
+      "ref": "C158",
+      "layer": "TOP",
+      "x": -5430.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AD23",
+        "GND",
+        "B"
+      ]
+    },
+    {
+      "ref": "C159",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25480.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C16",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24450.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AA8",
+        "CPU_SWT_PCIE2_C_N_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C160",
+      "layer": "TOP",
+      "x": -6395.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C161",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25660.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M10",
+        "POS1V0_VDDSOC",
+        "L"
+      ]
+    },
+    {
+      "ref": "C162",
+      "layer": "TOP",
+      "x": -5400.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AD23",
+        "GND",
+        "B"
+      ]
+    },
+    {
+      "ref": "C163",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25510.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C164",
+      "layer": "TOP",
+      "x": -6365.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C165",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25690.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M10",
+        "POS1V0_VDDSOC",
+        "L"
+      ]
+    },
+    {
+      "ref": "C166",
+      "layer": "TOP",
+      "x": -5370.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AD23",
+        "GND",
+        "B"
+      ]
+    },
+    {
+      "ref": "C167",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25540.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C168",
+      "layer": "TOP",
+      "x": -6335.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C17",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24405.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AF6",
+        "CPU_NVME_PCIE_C_P_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C170",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25895.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C171",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25570.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C172",
+      "layer": "TOP",
+      "x": -5060.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C173",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25925.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C174",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25600.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C18",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24375.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AG7",
+        "CPU_NVME_PCIE_C_N_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C181",
+      "layer": "TOP",
+      "x": -6310.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C182",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25715.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M10",
+        "POS1V0_VDDSOC",
+        "L"
+      ]
+    },
+    {
+      "ref": "C183",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25625.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C184",
+      "layer": "TOP",
+      "x": -6295.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C185",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25730.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M10",
+        "POS1V0_VDDSOC",
+        "L"
+      ]
+    },
+    {
+      "ref": "C186",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25640.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C187",
+      "layer": "TOP",
+      "x": -5030.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C188",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25955.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C189",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25665.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C19",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24345.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AH5",
+        "CPU_NVME_PCIE_C_P_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C190",
+      "layer": "TOP",
+      "x": -5000.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C191",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25985.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C194",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25695.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C195",
+      "layer": "TOP",
+      "x": -6280.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C196",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25745.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M10",
+        "POS1V0_VDDSOC",
+        "L"
+      ]
+    },
+    {
+      "ref": "C197",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25720.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C2",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25790.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "K4",
+        "CPU_SWT_PCIE0_C_N_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C20",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24390.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AG5",
+        "CPU_NVME_PCIE_C_N_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C200",
+      "layer": "TOP",
+      "x": -6265.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M13",
+        "POS1V0_VDDSOC",
+        "T"
+      ]
+    },
+    {
+      "ref": "C202",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25645.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C203",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25745.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C204",
+      "layer": "TOP",
+      "x": -5985.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C208",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25670.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C21",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24360.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AH3",
+        "CPU_NVME_PCIE_C_P_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C210",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25770.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C212",
+      "layer": "TOP",
+      "x": -5690.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AT22",
+        "POS1V8_S5",
+        "B"
+      ]
+    },
+    {
+      "ref": "C216",
+      "layer": "TOP",
+      "x": -5955.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C217",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25695.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C219",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25785.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C22",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24315.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AJ4",
+        "CPU_NVME_PCIE_C_N_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C220",
+      "layer": "TOP",
+      "x": -5930.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C223",
+      "layer": "TOP",
+      "x": -5665.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AT22",
+        "POS1V8_S5",
+        "B"
+      ]
+    },
+    {
+      "ref": "C23",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24330.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AJ8",
+        "CPU_NVME_PCIE_C_N_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C24",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24285.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AK8",
+        "CPU_NVME_PCIE_C_P_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C25",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25255.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP6",
+        "CPU_FPGA_PCIE_C_P",
+        "L"
+      ]
+    },
+    {
+      "ref": "C26",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25240.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AR7",
+        "CPU_FPGA_PCIE_C_N",
+        "L"
+      ]
+    },
+    {
+      "ref": "C27",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25210.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AU4",
+        "CPU_PHY_PCIE_C_P",
+        "L"
+      ]
+    },
+    {
+      "ref": "C28",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25225.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AT3",
+        "CPU_PHY_PCIE_C_N",
+        "L"
+      ]
+    },
+    {
+      "ref": "C29",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24300.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "AK6",
+        "CPU_SWT_FPGA0_PCIE_C_P",
+        "L"
+      ]
+    },
+    {
+      "ref": "C3",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25590.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M5",
+        "CPU_SWT_PCIE0_C_P_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C30",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25500.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AL7",
+        "CPU_SWT_FPGA0_PCIE_C_N",
+        "L"
+      ]
+    },
+    {
+      "ref": "C31",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25485.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AM3",
+        "CPU_SWT_FPGA1_PCIE_C_P",
+        "L"
+      ]
+    },
+    {
+      "ref": "C32",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25470.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AN4",
+        "CPU_SWT_FPGA1_PCIE_C_N",
+        "L"
+      ]
+    },
+    {
+      "ref": "C33",
+      "layer": "TOP",
+      "x": -5145.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC24",
+        "CPU_PWROK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "C34",
+      "layer": "TOP",
+      "x": -6500.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "E6",
+        "CPU_SVD_R",
+        "T"
+      ]
+    },
+    {
+      "ref": "C4",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25775.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "L5",
+        "CPU_SWT_PCIE0_C_N_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C44",
+      "layer": "TOP",
+      "x": -5980.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BB9",
+        "PCIE_RST_L_R_0",
+        "B"
+      ]
+    },
+    {
+      "ref": "C46",
+      "layer": "TOP",
+      "x": -5755.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AV11",
+        "PWR_BTN_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "C47",
+      "layer": "TOP",
+      "x": -5930.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BE10",
+        "SYS_RST_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "C5",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25560.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "N6",
+        "CPU_SWT_PCIE0_C_P_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C6",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25605.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "M7",
+        "CPU_SWT_PCIE0_C_N_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C60",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25040.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AW2",
+        "CPU_X48M_X1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C61",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24830.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AY3",
+        "CPU_X48M_X2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C62",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24550.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BB3",
+        "CPU_X32K_X1",
+        "L"
+      ]
+    },
+    {
+      "ref": "C63",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24500.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BC2",
+        "CPU_X32K_X2",
+        "L"
+      ]
+    },
+    {
+      "ref": "C7",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25545.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "P8",
+        "CPU_SWT_PCIE0_C_P_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C715",
+      "layer": "TOP",
+      "x": -4920.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AR32",
+        "CPU_TEST4_CCD0",
+        "B"
+      ]
+    },
+    {
+      "ref": "C716",
+      "layer": "TOP",
+      "x": -4995.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AT28",
+        "CPU_TEST4_CCD1",
+        "B"
+      ]
+    },
+    {
+      "ref": "C717",
+      "layer": "TOP",
+      "x": -4945.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "P31",
+        "CPU_TEST5",
+        "T"
+      ]
+    },
+    {
+      "ref": "C719",
+      "layer": "TOP",
+      "x": -5120.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA24",
+        "CPU_RST_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "C720",
+      "layer": "TOP",
+      "x": -6475.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "C6",
+        "CPU_SVC_R",
+        "T"
+      ]
+    },
+    {
+      "ref": "C751",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25725.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C752",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25810.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C753",
+      "layer": "TOP",
+      "x": -4970.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C754",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25755.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C755",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25840.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C756",
+      "layer": "TOP",
+      "x": -5905.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C757",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25310.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C758",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25870.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C759",
+      "layer": "TOP",
+      "x": -5875.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C760",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25340.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C761",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25900.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C762",
+      "layer": "TOP",
+      "x": -5845.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C763",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25370.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C764",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25930.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C765",
+      "layer": "TOP",
+      "x": -5815.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C766",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25400.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C767",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25960.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C768",
+      "layer": "TOP",
+      "x": -6730.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C769",
+      "layer": "TOP",
+      "x": -5650.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AT22",
+        "POS1V8_S5",
+        "B"
+      ]
+    },
+    {
+      "ref": "C770",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 26010.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C771",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25985.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C772",
+      "layer": "TOP",
+      "x": -6705.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C773",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25785.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "B1",
+        "GND",
+        "L"
+      ]
+    },
+    {
+      "ref": "C775",
+      "layer": "TOP",
+      "x": -5635.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C776",
+      "layer": "TOP",
+      "x": -5620.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C777",
+      "layer": "TOP",
+      "x": -5605.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AF22",
+        "POS1V1_VDDCR",
+        "B"
+      ]
+    },
+    {
+      "ref": "C778",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24485.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C779",
+      "layer": "TOP",
+      "x": -6005.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C780",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24785.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C781",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24510.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C782",
+      "layer": "TOP",
+      "x": -5980.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C783",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24810.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C784",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24540.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C785",
+      "layer": "TOP",
+      "x": -5950.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C786",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24840.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C787",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24570.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C788",
+      "layer": "TOP",
+      "x": -5920.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C789",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24870.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C790",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24600.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C791",
+      "layer": "TOP",
+      "x": -5890.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C792",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24900.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C793",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24630.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C794",
+      "layer": "TOP",
+      "x": -5860.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C795",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24925.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C796",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24655.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C797",
+      "layer": "TOP",
+      "x": -5830.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C798",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24950.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C799",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24680.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C8",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25575.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "N8",
+        "CPU_SWT_PCIE0_C_N_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "C800",
+      "layer": "TOP",
+      "x": -5800.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C801",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24980.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C802",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24710.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C803",
+      "layer": "TOP",
+      "x": -5770.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C804",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25010.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C805",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24740.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C806",
+      "layer": "TOP",
+      "x": -5740.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C807",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25040.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C808",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24770.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C809",
+      "layer": "TOP",
+      "x": -5710.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C810",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25070.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C811",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24800.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C812",
+      "layer": "TOP",
+      "x": -5680.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C813",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25100.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C814",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24830.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C815",
+      "layer": "TOP",
+      "x": -5650.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C816",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25130.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C817",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24860.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C818",
+      "layer": "TOP",
+      "x": -5620.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C819",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25160.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C820",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24890.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C821",
+      "layer": "TOP",
+      "x": -5590.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C822",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25190.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C823",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24920.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C824",
+      "layer": "TOP",
+      "x": -5560.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C825",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25220.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C826",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24950.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C827",
+      "layer": "TOP",
+      "x": -5530.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C828",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25250.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C829",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 24980.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C830",
+      "layer": "TOP",
+      "x": -5500.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C831",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25280.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C832",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25010.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C833",
+      "layer": "TOP",
+      "x": -5470.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C834",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25310.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C835",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25040.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C836",
+      "layer": "TOP",
+      "x": -5440.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C837",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25340.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C838",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25070.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C839",
+      "layer": "TOP",
+      "x": -5410.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C840",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25370.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C841",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25100.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C842",
+      "layer": "TOP",
+      "x": -5380.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C843",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25400.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C844",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25130.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C845",
+      "layer": "TOP",
+      "x": -5350.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C846",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25525.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C847",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25160.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C848",
+      "layer": "TOP",
+      "x": -5320.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C849",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25555.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C850",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25190.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C851",
+      "layer": "TOP",
+      "x": -5290.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C852",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25585.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C853",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25220.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C854",
+      "layer": "TOP",
+      "x": -5260.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C855",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25615.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C856",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25250.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C857",
+      "layer": "TOP",
+      "x": -5230.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C858",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25430.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C859",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25280.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C860",
+      "layer": "TOP",
+      "x": -5200.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C861",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25460.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C862",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25310.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "C863",
+      "layer": "TOP",
+      "x": -5170.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C879",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25155.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C880",
+      "layer": "TOP",
+      "x": -5785.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C881",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25185.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C882",
+      "layer": "TOP",
+      "x": -6680.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C883",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25215.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C884",
+      "layer": "TOP",
+      "x": -6650.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "C885",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25245.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C886",
+      "layer": "TOP",
+      "x": -5755.0,
+      "y": 26110.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "M22",
+        "POS1V1_S0",
+        "T"
+      ]
+    },
+    {
+      "ref": "C887",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25275.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "C888",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25430.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C889",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25455.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AP10",
+        "POS0V75_S0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C896",
+      "layer": "TOP",
+      "x": -6380.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AV18",
+        "CPU_RSMRST_L_BUF",
+        "B"
+      ]
+    },
+    {
+      "ref": "C897",
+      "layer": "TOP",
+      "x": -5730.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AY11",
+        "CPU_PWR_GOOD_BUF",
+        "B"
+      ]
+    },
+    {
+      "ref": "C898",
+      "layer": "TOP",
+      "x": -6505.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB17",
+        "SPI_TPM_CS_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "C9",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 24510.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "W3",
+        "CPU_SWT_PCIE2_C_P_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "C94",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25485.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C95",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25500.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C96",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25515.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C97",
+      "layer": "TOP",
+      "x": -5145.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "T16",
+        "POS1V1_VDDCR",
+        "T"
+      ]
+    },
+    {
+      "ref": "C98",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25530.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "T9",
+        "POS1V1_VDDCR",
+        "L"
+      ]
+    },
+    {
+      "ref": "C99",
+      "layer": "TOP",
+      "x": -4885.0,
+      "y": 25335.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 0,
+      "owner_pin": [
+        "U30",
+        "POS1V1_VDDCR",
+        "R"
+      ]
+    },
+    {
+      "ref": "R1",
+      "layer": "TOP",
+      "x": -6210.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BB6",
+        "CPU_TDO_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R10",
+      "layer": "TOP",
+      "x": -6450.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "E8",
+        "DP_STEREOSYNC",
+        "T"
+      ]
+    },
+    {
+      "ref": "R1005",
+      "layer": "TOP",
+      "x": -6625.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "R1006",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25300.0,
+      "rotation": 180.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "B43",
+        "GND",
+        "R"
+      ]
+    },
+    {
+      "ref": "R1008",
+      "layer": "TOP",
+      "x": -6600.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "A3",
+        "GND",
+        "T"
+      ]
+    },
+    {
+      "ref": "R104",
+      "layer": "TOP",
+      "x": -5580.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AW13",
+        "AGPIO_32",
+        "B"
+      ]
+    },
+    {
+      "ref": "R107",
+      "layer": "TOP",
+      "x": -6630.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AW16",
+        "ESPI_CLK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R108",
+      "layer": "TOP",
+      "x": -6655.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB15",
+        "CPU_SPI_CLK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R109",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24855.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AY5",
+        "PCIE_CLK_R_P_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "R11",
+      "layer": "TOP",
+      "x": -5345.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA24",
+        "CPU_RST_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R111",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24730.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BA5",
+        "PCIE_CLK_R_N_1",
+        "L"
+      ]
+    },
+    {
+      "ref": "R112",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25065.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AW5",
+        "PCIE_CLK_R_P_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "R113",
+      "layer": "TOP",
+      "x": -6580.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AW17",
+        "AGPIO30_ESPI_CS_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R114",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25165.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AV5",
+        "PCIE_CLK_R_N_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "R118",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25090.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AW7",
+        "PCIE_CLK_R_P_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "R119",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25190.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AV6",
+        "PCIE_CLK_R_N_2",
+        "L"
+      ]
+    },
+    {
+      "ref": "R12",
+      "layer": "TOP",
+      "x": -5320.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC24",
+        "CPU_PWROK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R120",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24880.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AY6",
+        "PCIE_CLK_R_P_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "R121",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24755.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BA7",
+        "PCIE_CLK_R_N_3",
+        "L"
+      ]
+    },
+    {
+      "ref": "R122",
+      "layer": "TOP",
+      "x": -6205.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB21",
+        "MODE_LATCH_OD",
+        "B"
+      ]
+    },
+    {
+      "ref": "R123",
+      "layer": "TOP",
+      "x": -6265.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BE5",
+        "PCIE_CLK_R_P_4",
+        "B"
+      ]
+    },
+    {
+      "ref": "R124",
+      "layer": "TOP",
+      "x": -6240.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BD5",
+        "PCIE_CLK_R_N_4",
+        "B"
+      ]
+    },
+    {
+      "ref": "R126",
+      "layer": "TOP",
+      "x": -6480.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BD17",
+        "SPI1_CS2_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R128",
+      "layer": "TOP",
+      "x": -6455.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AV17",
+        "ESPI_DAT_0",
+        "B"
+      ]
+    },
+    {
+      "ref": "R129",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24780.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BA2",
+        "CPU_CLK_48M_R",
+        "L"
+      ]
+    },
+    {
+      "ref": "R13",
+      "layer": "TOP",
+      "x": -5295.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC24",
+        "CPU_PWROK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R130",
+      "layer": "TOP",
+      "x": -6605.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA16",
+        "ESPI_DAT_1",
+        "B"
+      ]
+    },
+    {
+      "ref": "R131",
+      "layer": "TOP",
+      "x": -6555.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA17",
+        "ESPI_DAT_2",
+        "B"
+      ]
+    },
+    {
+      "ref": "R132",
+      "layer": "TOP",
+      "x": -6730.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AY15",
+        "ESPI_DAT_3",
+        "B"
+      ]
+    },
+    {
+      "ref": "R137",
+      "layer": "TOP",
+      "x": -5585.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BE23",
+        "FPGA_DONE_BUF",
+        "B"
+      ]
+    },
+    {
+      "ref": "R138",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25140.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AW2",
+        "CPU_X48M_X1",
+        "L"
+      ]
+    },
+    {
+      "ref": "R139",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24600.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BB3",
+        "CPU_X32K_X1",
+        "L"
+      ]
+    },
+    {
+      "ref": "R14",
+      "layer": "TOP",
+      "x": -6180.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AY21",
+        "CPU_PROCHOT_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R143",
+      "layer": "TOP",
+      "x": -5955.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AY9",
+        "TPM_RST_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R15",
+      "layer": "TOP",
+      "x": -6550.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "C6",
+        "CPU_SVC_R",
+        "T"
+      ]
+    },
+    {
+      "ref": "R153",
+      "layer": "TOP",
+      "x": -6765.0,
+      "y": 25810.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 0,
+      "owner_pin": [
+        "C4",
+        "USBC_SCL",
+        "L"
+      ]
+    },
+    {
+      "ref": "R154",
+      "layer": "TOP",
+      "x": -6575.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "B5",
+        "USBC_SDA",
+        "T"
+      ]
+    },
+    {
+      "ref": "R155",
+      "layer": "TOP",
+      "x": -5905.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BA10",
+        "CPU_FPGA_GPIO_3",
+        "B"
+      ]
+    },
+    {
+      "ref": "R156",
+      "layer": "TOP",
+      "x": -6055.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AY8",
+        "USB_OC_L_1",
+        "B"
+      ]
+    },
+    {
+      "ref": "R157",
+      "layer": "TOP",
+      "x": -6130.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BE7",
+        "USB_OC_L_3",
+        "B"
+      ]
+    },
+    {
+      "ref": "R16",
+      "layer": "TOP",
+      "x": -6525.0,
+      "y": 26040.0,
+      "rotation": 90.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "E6",
+        "CPU_SVD_R",
+        "T"
+      ]
+    },
+    {
+      "ref": "R17",
+      "layer": "TOP",
+      "x": -4970.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AR29",
+        "SMU_ZVDD_ODOR2",
+        "B"
+      ]
+    },
+    {
+      "ref": "R18",
+      "layer": "TOP",
+      "x": -5395.0,
+      "y": 24185.0,
+      "rotation": 180.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AU25",
+        "VSS_SENSE_B",
+        "B"
+      ]
+    },
+    {
+      "ref": "R19",
+      "layer": "TOP",
+      "x": -5720.0,
+      "y": 26110.0,
+      "rotation": 0.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "N23",
+        "VSS_SENSE_A",
+        "T"
+      ]
+    },
+    {
+      "ref": "R2",
+      "layer": "TOP",
+      "x": -5270.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA24",
+        "CPU_RST_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R3",
+      "layer": "TOP",
+      "x": -5245.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC24",
+        "CPU_PWROK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R37",
+      "layer": "TOP",
+      "x": -5880.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BE10",
+        "SYS_RST_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R38",
+      "layer": "TOP",
+      "x": -5830.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BA11",
+        "CPU_FPGA_CFG_TDO",
+        "B"
+      ]
+    },
+    {
+      "ref": "R39",
+      "layer": "TOP",
+      "x": -6030.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BB9",
+        "PCIE_RST_L_R_0",
+        "B"
+      ]
+    },
+    {
+      "ref": "R4",
+      "layer": "TOP",
+      "x": -6255.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA21",
+        "CPU_THERMTRIP_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R43",
+      "layer": "TOP",
+      "x": -5655.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AV12",
+        "CPU_FPGA_CFG_TCK",
+        "B"
+      ]
+    },
+    {
+      "ref": "R44",
+      "layer": "TOP",
+      "x": -5555.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BC13",
+        "WAKE1_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R45",
+      "layer": "TOP",
+      "x": -5630.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AY12",
+        "WAKE2_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R46",
+      "layer": "TOP",
+      "x": -5530.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BA13",
+        "WAKE3_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R47",
+      "layer": "TOP",
+      "x": -5805.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BE11",
+        "CPU_INT_L_3",
+        "B"
+      ]
+    },
+    {
+      "ref": "R5",
+      "layer": "TOP",
+      "x": -5455.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AY14",
+        "CPU_PCC_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R50",
+      "layer": "TOP",
+      "x": -5855.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AW10",
+        "CPU_FPGA_CFG_TMS",
+        "B"
+      ]
+    },
+    {
+      "ref": "R51",
+      "layer": "TOP",
+      "x": -6430.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB17",
+        "SPI_TPM_CS_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R52",
+      "layer": "TOP",
+      "x": -5705.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BB11",
+        "CPU_AGPIO_10",
+        "B"
+      ]
+    },
+    {
+      "ref": "R57",
+      "layer": "TOP",
+      "x": -6080.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BC7",
+        "N16223819",
+        "B"
+      ]
+    },
+    {
+      "ref": "R58",
+      "layer": "TOP",
+      "x": -6155.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BD6",
+        "N16223823",
+        "B"
+      ]
+    },
+    {
+      "ref": "R59",
+      "layer": "TOP",
+      "x": -6355.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AY18",
+        "CPU_INT_L_0",
+        "B"
+      ]
+    },
+    {
+      "ref": "R6",
+      "layer": "TOP",
+      "x": -6105.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AY22",
+        "CPU_SIC",
+        "B"
+      ]
+    },
+    {
+      "ref": "R60",
+      "layer": "TOP",
+      "x": -6305.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AW19",
+        "CPU_INT_L_1",
+        "B"
+      ]
+    },
+    {
+      "ref": "R61",
+      "layer": "TOP",
+      "x": -5780.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AW11",
+        "CPU_INT_L_2",
+        "B"
+      ]
+    },
+    {
+      "ref": "R63",
+      "layer": "TOP",
+      "x": -6230.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AW21",
+        "CPU_FPGA_GPIO_2",
+        "B"
+      ]
+    },
+    {
+      "ref": "R652",
+      "layer": "TOP",
+      "x": -6530.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BE17",
+        "CPU_SPI_CS_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R67",
+      "layer": "TOP",
+      "x": -6005.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BD22",
+        "N16224011",
+        "B"
+      ]
+    },
+    {
+      "ref": "R68",
+      "layer": "TOP",
+      "x": -5980.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB22",
+        "N16224031",
+        "B"
+      ]
+    },
+    {
+      "ref": "R683",
+      "layer": "TOP",
+      "x": -5605.0,
+      "y": 24185.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BD12",
+        "AGPIO_4",
+        "B"
+      ]
+    },
+    {
+      "ref": "R692",
+      "layer": "TOP",
+      "x": -5680.0,
+      "y": 26110.0,
+      "rotation": 0.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "N23",
+        "VSS_SENSE_A",
+        "T"
+      ]
+    },
+    {
+      "ref": "R693",
+      "layer": "TOP",
+      "x": -4920.0,
+      "y": 26040.0,
+      "rotation": 270.0,
+      "side": "T",
+      "ring": 0,
+      "owner_pin": [
+        "L32",
+        "SMU_ZVDD_ODOR0",
+        "T"
+      ]
+    },
+    {
+      "ref": "R694",
+      "layer": "TOP",
+      "x": -4945.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AR30",
+        "SMU_ZVDD_ODOR1",
+        "B"
+      ]
+    },
+    {
+      "ref": "R7",
+      "layer": "TOP",
+      "x": -5560.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA23",
+        "CPU_SID",
+        "B"
+      ]
+    },
+    {
+      "ref": "R70",
+      "layer": "TOP",
+      "x": -5485.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC23",
+        "N16224051",
+        "B"
+      ]
+    },
+    {
+      "ref": "R702",
+      "layer": "TOP",
+      "x": -6080.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BD22",
+        "N16224011",
+        "B"
+      ]
+    },
+    {
+      "ref": "R703",
+      "layer": "TOP",
+      "x": -6055.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB22",
+        "N16224031",
+        "B"
+      ]
+    },
+    {
+      "ref": "R704",
+      "layer": "TOP",
+      "x": -5535.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC23",
+        "N16224051",
+        "B"
+      ]
+    },
+    {
+      "ref": "R705",
+      "layer": "TOP",
+      "x": -5045.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BD25",
+        "N16223811",
+        "B"
+      ]
+    },
+    {
+      "ref": "R706",
+      "layer": "TOP",
+      "x": -5220.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BE24",
+        "N16223815",
+        "B"
+      ]
+    },
+    {
+      "ref": "R707",
+      "layer": "TOP",
+      "x": -6105.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BC7",
+        "N16223819",
+        "B"
+      ]
+    },
+    {
+      "ref": "R708",
+      "layer": "TOP",
+      "x": -6180.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BD6",
+        "N16223823",
+        "B"
+      ]
+    },
+    {
+      "ref": "R709",
+      "layer": "TOP",
+      "x": -6705.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB15",
+        "CPU_SPI_CLK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R710",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24525.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BC5",
+        "PCIE_CLK_R_P_5",
+        "L"
+      ]
+    },
+    {
+      "ref": "R711",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24575.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BB5",
+        "PCIE_CLK_R_N_5",
+        "L"
+      ]
+    },
+    {
+      "ref": "R712",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24805.0,
+      "rotation": 180.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BA4",
+        "RTC_CLK_32K_R",
+        "L"
+      ]
+    },
+    {
+      "ref": "R72",
+      "layer": "TOP",
+      "x": -5020.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BD25",
+        "N16223811",
+        "B"
+      ]
+    },
+    {
+      "ref": "R721",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 25115.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AW8",
+        "USB_OC_L_0",
+        "L"
+      ]
+    },
+    {
+      "ref": "R726",
+      "layer": "TOP",
+      "x": -6005.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AY9",
+        "TPM_RST_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R729",
+      "layer": "TOP",
+      "x": -6405.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AY17",
+        "ESPI_CS_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R73",
+      "layer": "TOP",
+      "x": -5095.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BE24",
+        "N16223815",
+        "B"
+      ]
+    },
+    {
+      "ref": "R730",
+      "layer": "TOP",
+      "x": -6680.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AV15",
+        "SPI_ROM_REQ",
+        "B"
+      ]
+    },
+    {
+      "ref": "R8",
+      "layer": "TOP",
+      "x": -6155.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AV21",
+        "CPU_ALERT_L",
+        "B"
+      ]
+    },
+    {
+      "ref": "R815",
+      "layer": "TOP",
+      "x": -5430.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "AV14",
+        "CPU_FPGA_GPIO_1",
+        "B"
+      ]
+    },
+    {
+      "ref": "R862",
+      "layer": "TOP",
+      "x": -5070.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BC24",
+        "CPU_PWROK_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R863",
+      "layer": "TOP",
+      "x": -5195.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AU24",
+        "CPU_TEST14",
+        "B"
+      ]
+    },
+    {
+      "ref": "R864",
+      "layer": "TOP",
+      "x": -5170.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AW24",
+        "CPU_TEST15",
+        "B"
+      ]
+    },
+    {
+      "ref": "R865",
+      "layer": "TOP",
+      "x": -6030.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AV22",
+        "CPU_TEST16",
+        "B"
+      ]
+    },
+    {
+      "ref": "R866",
+      "layer": "TOP",
+      "x": -5510.0,
+      "y": 24255.0,
+      "rotation": 270.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AW23",
+        "CPU_TEST17",
+        "B"
+      ]
+    },
+    {
+      "ref": "R877",
+      "layer": "TOP",
+      "x": -5640.0,
+      "y": 26110.0,
+      "rotation": 0.0,
+      "side": "T",
+      "ring": 1,
+      "owner_pin": [
+        "N23",
+        "VSS_SENSE_A",
+        "T"
+      ]
+    },
+    {
+      "ref": "R9",
+      "layer": "TOP",
+      "x": -6130.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "AY21",
+        "CPU_PROCHOT_L_R",
+        "B"
+      ]
+    },
+    {
+      "ref": "R948",
+      "layer": "TOP",
+      "x": -5680.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BD11",
+        "CPU_FPGA_CFG_TDI",
+        "B"
+      ]
+    },
+    {
+      "ref": "R95",
+      "layer": "TOP",
+      "x": -6330.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BB18",
+        "BRD_ID_0",
+        "B"
+      ]
+    },
+    {
+      "ref": "R96",
+      "layer": "TOP",
+      "x": -6280.0,
+      "y": 24255.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 0,
+      "owner_pin": [
+        "BA19",
+        "BRD_ID_1",
+        "B"
+      ]
+    },
+    {
+      "ref": "R97",
+      "layer": "TOP",
+      "x": -5480.0,
+      "y": 24185.0,
+      "rotation": 90.0,
+      "side": "B",
+      "ring": 1,
+      "owner_pin": [
+        "BE14",
+        "BRD_ID_2",
+        "B"
+      ]
+    },
+    {
+      "ref": "R971",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 24990.0,
+      "rotation": 180.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "",
+        "",
+        "R"
+      ]
+    },
+    {
+      "ref": "R973",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25015.0,
+      "rotation": 180.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "",
+        "",
+        "R"
+      ]
+    },
+    {
+      "ref": "R993",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25040.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "",
+        "",
+        "R"
+      ]
+    },
+    {
+      "ref": "R994",
+      "layer": "TOP",
+      "x": -4820.0,
+      "y": 25065.0,
+      "rotation": 0.0,
+      "side": "R",
+      "ring": 1,
+      "owner_pin": [
+        "",
+        "",
+        "R"
+      ]
+    },
+    {
+      "ref": "X1",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24960.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "AW2",
+        "CPU_X48M_X1",
+        "L"
+      ]
+    },
+    {
+      "ref": "X2",
+      "layer": "TOP",
+      "x": -6885.0,
+      "y": 24665.0,
+      "rotation": 0.0,
+      "side": "L",
+      "ring": 1,
+      "owner_pin": [
+        "BB3",
+        "CPU_X32K_X1",
+        "L"
+      ]
+    }
+  ]
+}

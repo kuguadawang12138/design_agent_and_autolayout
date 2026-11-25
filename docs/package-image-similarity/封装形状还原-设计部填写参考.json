@@ -1,0 +1,911 @@
+{
+  "project_code": "1188009画板子",
+  "units": "mils",
+  "layers": 8,
+  "devicetype": "DEMO",
+  "packagesymbol": "FIGURE_TYPE_REF",
+  "value": "DEMO",
+  "refdes": "U1",
+  "X": 1250.5,
+  "Y": 980.0,
+  "top_side": 1,
+  "_readme": "正式提交删除 _readme 与各 pin 的 _note。",
+  "pins": [
+    {
+      "_note": "18 种 figure_type",
+      "pin_number": "ref_circle",
+      "padstack": "PS_CIRCLE",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "CIRCLE",
+      "width": 12.6,
+      "height": 12.6
+    },
+    {
+      "pin_number": "ref_square",
+      "padstack": "PS_SQUARE",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "SQUARE",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "pin_number": "ref_rectangle",
+      "padstack": "PS_RECT",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "RECTANGLE",
+      "width": 30,
+      "height": 15
+    },
+    {
+      "pin_number": "ref_oblong_x",
+      "padstack": "PS_OBLONG_X",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "OBLONG_X",
+      "width": 32,
+      "height": 8
+    },
+    {
+      "pin_number": "ref_oblong_y",
+      "padstack": "PS_OBLONG_Y",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "OBLONG_Y",
+      "width": 8,
+      "height": 32
+    },
+    {
+      "pin_number": "ref_roundrect",
+      "padstack": "PS_ROUNDRECT",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "ROUNDED_RECTANGLE",
+      "width": 40,
+      "height": 25,
+      "corner_radius": 5
+    },
+    {
+      "pin_number": "ref_chamfer",
+      "padstack": "PS_CHAMFER",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "CHAMFERED_RECTANGLE",
+      "width": 40,
+      "height": 25,
+      "chamfer_ratio": 0.25
+    },
+    {
+      "pin_number": "ref_octagon",
+      "padstack": "PS_OCTAGON",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "OCTAGON",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "pin_number": "ref_donut",
+      "padstack": "PS_DONUT",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "DONUT",
+      "width": 40,
+      "height": 40,
+      "inner_diameter": 20
+    },
+    {
+      "pin_number": "ref_nsided",
+      "padstack": "PS_NSIDED",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "N_SIDED_POLYGON",
+      "width": 30,
+      "height": 30,
+      "sides": 6
+    },
+    {
+      "pin_number": "ref_cross",
+      "padstack": "PS_CROSS",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "CROSS",
+      "width": 30,
+      "height": 30
+    },
+    {
+      "pin_number": "ref_diamond",
+      "padstack": "PS_DIAMOND",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "DIAMOND",
+      "width": 20,
+      "height": 30
+    },
+    {
+      "pin_number": "ref_triangle",
+      "padstack": "PS_TRIANGLE",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "TRIANGLE",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "pin_number": "ref_pentagon",
+      "padstack": "PS_PENTAGON",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "PENTAGON",
+      "width": 28,
+      "height": 28
+    },
+    {
+      "pin_number": "ref_hex_x",
+      "padstack": "PS_HEX_X",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "HEXAGON_X",
+      "width": 30,
+      "height": 26
+    },
+    {
+      "pin_number": "ref_hex_y",
+      "padstack": "PS_HEX_Y",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "HEXAGON_Y",
+      "width": 26,
+      "height": 30
+    },
+    {
+      "_note": "组合示例 combo01~15",
+      "pin_number": "combo01",
+      "padstack": "PS_SHAPE_SIMPLE",
+      "x": 100,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "simple_rect",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "segment",
+              "x1": -40,
+              "y1": -20,
+              "x2": 40,
+              "y2": -20
+            },
+            {
+              "type": "segment",
+              "x1": 40,
+              "y1": -20,
+              "x2": 40,
+              "y2": 20
+            },
+            {
+              "type": "segment",
+              "x1": 40,
+              "y1": 20,
+              "x2": -40,
+              "y2": 20
+            },
+            {
+              "type": "segment",
+              "x1": -40,
+              "y1": 20,
+              "x2": -40,
+              "y2": -20
+            }
+          ],
+          "void": []
+        }
+      ]
+    },
+    {
+      "pin_number": "combo02",
+      "padstack": "PS_SHAPE_1HOLE",
+      "x": 100,
+      "y": 50,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "rect_with_square_hole",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-50,-50;50,-50;50,50;-50,50"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-10,-10;10,-10;10,10;-10,10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo03",
+      "padstack": "PS_SHAPE_2HOLE",
+      "x": 100,
+      "y": 100,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "dual_hole_pad",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-60,-40;60,-40;60,40;-60,40"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-30,-15;-10,-15;-10,15;-30,15"
+            },
+            {
+              "type": "arc",
+              "start_x": 20,
+              "start_y": 0,
+              "end_x": 40,
+              "end_y": 0,
+              "center_x": 30,
+              "center_y": 0,
+              "radius": 10,
+              "cw": 1
+            },
+            {
+              "type": "arc",
+              "start_x": 40,
+              "start_y": 0,
+              "end_x": 20,
+              "end_y": 0,
+              "center_x": 30,
+              "center_y": 0,
+              "radius": 10,
+              "cw": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo04",
+      "padstack": "PS_SHAPE_3HOLE",
+      "x": 100,
+      "y": 150,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "triple_slot",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-80,-30;80,-30;80,30;-80,30"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-60,-10;-40,-10;-40,10;-60,10"
+            },
+            {
+              "type": "polygon",
+              "points": "-10,-10;10,-10;10,10;-10,10"
+            },
+            {
+              "type": "polygon",
+              "points": "40,-10;60,-10;60,10;40,10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo05",
+      "padstack": "PS_SHAPE_COMPLEX_VOID",
+      "x": 100,
+      "y": 200,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "slot_with_round_end",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-50,-50;50,-50;50,50;-50,50"
+            }
+          ],
+          "void": [
+            {
+              "type": "segment",
+              "x1": -20,
+              "y1": 0,
+              "x2": 20,
+              "y2": 0
+            },
+            {
+              "type": "arc",
+              "start_x": 20,
+              "start_y": 0,
+              "end_x": 20,
+              "end_y": 0,
+              "center_x": 20,
+              "center_y": -8,
+              "radius": 8,
+              "cw": 0
+            },
+            {
+              "type": "segment",
+              "x1": 20,
+              "y1": -16,
+              "x2": -20,
+              "y2": -16
+            },
+            {
+              "type": "arc",
+              "start_x": -20,
+              "start_y": -16,
+              "end_x": -20,
+              "end_y": 0,
+              "center_x": -20,
+              "center_y": -8,
+              "radius": 8,
+              "cw": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo06",
+      "padstack": "PS_SHAPE_KICAD_VOID",
+      "x": 100,
+      "y": 250,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "kicad_arc_hole",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-40,-40;40,-40;40,40;-40,40"
+            }
+          ],
+          "void": [
+            {
+              "type": "segment",
+              "x1": -15,
+              "y1": 0,
+              "x2": 15,
+              "y2": 0
+            },
+            {
+              "type": "arc",
+              "start_x": 15,
+              "start_y": 0,
+              "mid_x": 0,
+              "mid_y": 15,
+              "end_x": -15,
+              "end_y": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo07",
+      "padstack": "PS_SHAPE_2PART",
+      "x": 200,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "two_islands",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-50,-20;-10,-20;-10,20;-50,20"
+            }
+          ],
+          "void": []
+        },
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "10,-20;50,-20;50,20;10,20"
+            }
+          ],
+          "void": []
+        }
+      ]
+    },
+    {
+      "pin_number": "combo08",
+      "padstack": "PS_SHAPE_THERMAL",
+      "x": 200,
+      "y": 50,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "thermal_with_tab",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-60,-60;60,-60;60,60;-60,60"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-40,-40;40,-40;40,40;-40,40"
+            },
+            {
+              "type": "polygon",
+              "points": "-15,-15;15,-15;15,15;-15,15"
+            }
+          ]
+        },
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "65,-8;85,-8;85,8;65,8"
+            }
+          ],
+          "void": []
+        }
+      ]
+    },
+    {
+      "pin_number": "combo09",
+      "padstack": "PS_SHAPE_DUAL_ISLAND",
+      "x": 200,
+      "y": 100,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "dual_pads_with_holes",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-70,-25;-30,-25;-30,25;-70,25"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-55,-10;-45,-10;-45,10;-55,10"
+            }
+          ]
+        },
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "30,-25;70,-25;70,25;30,25"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "45,-10;55,-10;55,10;45,10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo10",
+      "padstack": "PS_SHAPE_ROUNDED",
+      "x": 200,
+      "y": 150,
+      "rotation": 90,
+      "figure_type": "SHAPE",
+      "shape_name": "rounded_thermal",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "segment",
+              "x1": -50,
+              "y1": -30,
+              "x2": 50,
+              "y2": -30
+            },
+            {
+              "type": "segment",
+              "x1": 50,
+              "y1": -30,
+              "x2": 50,
+              "y2": 30
+            },
+            {
+              "type": "arc",
+              "start_x": 50,
+              "start_y": 30,
+              "end_x": -50,
+              "end_y": 30,
+              "center_x": 0,
+              "center_y": 30,
+              "radius": 50,
+              "cw": 1
+            },
+            {
+              "type": "segment",
+              "x1": -50,
+              "y1": 30,
+              "x2": -50,
+              "y2": -30
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-20,-10;20,-10;20,10;-20,10"
+            },
+            {
+              "type": "arc",
+              "start_x": 0,
+              "start_y": -5,
+              "end_x": 0,
+              "end_y": 5,
+              "center_x": 0,
+              "center_y": 0,
+              "radius": 5,
+              "cw": 1
+            },
+            {
+              "type": "arc",
+              "start_x": 0,
+              "start_y": 5,
+              "end_x": 0,
+              "end_y": -5,
+              "center_x": 0,
+              "center_y": 0,
+              "radius": 5,
+              "cw": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo11",
+      "padstack": "PS_FLASH_FINGER",
+      "x": 200,
+      "y": 200,
+      "rotation": 0,
+      "figure_type": "FLASH",
+      "shape_name": "finger_connector",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "segment",
+              "x1": 0,
+              "y1": 0,
+              "x2": 0,
+              "y2": 40
+            },
+            {
+              "type": "segment",
+              "x1": 0,
+              "y1": 40,
+              "x2": 15,
+              "y2": 40
+            },
+            {
+              "type": "segment",
+              "x1": 15,
+              "y1": 40,
+              "x2": 15,
+              "y2": 0
+            },
+            {
+              "type": "segment",
+              "x1": 15,
+              "y1": 0,
+              "x2": 0,
+              "y2": 0
+            }
+          ],
+          "void": []
+        }
+      ]
+    },
+    {
+      "pin_number": "combo12",
+      "padstack": "PS_FLASH_HOLED",
+      "x": 200,
+      "y": 250,
+      "rotation": 0,
+      "figure_type": "FLASH",
+      "shape_name": "flash_ring",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-25,-25;25,-25;25,25;-25,25"
+            }
+          ],
+          "void": [
+            {
+              "type": "arc",
+              "start_x": -10,
+              "start_y": 0,
+              "end_x": 10,
+              "end_y": 0,
+              "center_x": 0,
+              "center_y": 0,
+              "radius": 10,
+              "cw": 1
+            },
+            {
+              "type": "arc",
+              "start_x": 10,
+              "start_y": 0,
+              "end_x": -10,
+              "end_y": 0,
+              "center_x": 0,
+              "center_y": 0,
+              "radius": 10,
+              "cw": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pin_number": "combo13",
+      "padstack": "PS_DONUT_FID",
+      "x": 300,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "DONUT",
+      "width": 50,
+      "height": 50,
+      "inner_diameter": 25
+    },
+    {
+      "pin_number": "combo14",
+      "padstack": "PS_SHAPE_OFFSET",
+      "x": 300,
+      "y": 50,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "offset_tab",
+      "offset_x": 5.0,
+      "offset_y": -3.0,
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-20,-10;20,-10;20,10;-20,10"
+            }
+          ],
+          "void": []
+        }
+      ]
+    },
+    {
+      "pin_number": "combo15",
+      "padstack": "PS_SHAPE_ROUNDRECT_OUTLINE",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "SHAPE",
+      "shape_name": "ss_6000x14000r50",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "arc",
+              "start_x": -30.0,
+              "start_y": 55.0,
+              "end_x": -15.0,
+              "end_y": 70.0,
+              "center_x": -15.0,
+              "center_y": 55.0,
+              "radius": 15.0,
+              "cw": 1
+            },
+            {
+              "type": "segment",
+              "x1": -15.0,
+              "y1": 70.0,
+              "x2": 15.0,
+              "y2": 70.0
+            },
+            {
+              "type": "arc",
+              "start_x": 15.0,
+              "start_y": 70.0,
+              "end_x": 30.0,
+              "end_y": 55.0,
+              "center_x": 15.0,
+              "center_y": 55.0,
+              "radius": 15.0,
+              "cw": 1
+            },
+            {
+              "type": "segment",
+              "x1": 30.0,
+              "y1": 55.0,
+              "x2": 30.0,
+              "y2": -55.0
+            },
+            {
+              "type": "arc",
+              "start_x": 30.0,
+              "start_y": -55.0,
+              "end_x": 15.0,
+              "end_y": -70.0,
+              "center_x": 15.0,
+              "center_y": -55.0,
+              "radius": 15.0,
+              "cw": 1
+            },
+            {
+              "type": "segment",
+              "x1": 15.0,
+              "y1": -70.0,
+              "x2": -15.0,
+              "y2": -70.0
+            },
+            {
+              "type": "arc",
+              "start_x": -15.0,
+              "start_y": -70.0,
+              "end_x": -30.0,
+              "end_y": -55.0,
+              "center_x": -15.0,
+              "center_y": -55.0,
+              "radius": 15.0,
+              "cw": 1
+            },
+            {
+              "type": "segment",
+              "x1": -30.0,
+              "y1": -55.0,
+              "x2": -30.0,
+              "y2": 55.0
+            }
+          ],
+          "void": [
+            {
+              "type": "arc",
+              "start_x": -5.0,
+              "start_y": 26.0,
+              "end_x": 9.14,
+              "end_y": 40.0,
+              "center_x": -5.0,
+              "center_y": 40.0,
+              "radius": 14.14,
+              "cw": 1
+            },
+            {
+              "type": "arc",
+              "start_x": 9.14,
+              "start_y": 40.0,
+              "end_x": -5.0,
+              "end_y": 54.0,
+              "center_x": -5.0,
+              "center_y": 40.0,
+              "radius": 14.14,
+              "cw": 1
+            },
+            {
+              "type": "segment",
+              "x1": -10.0,
+              "y1": -50.0,
+              "x2": -10.0,
+              "y2": -35.0
+            },
+            {
+              "type": "segment",
+              "x1": -10.0,
+              "y1": -35.0,
+              "x2": 10.0,
+              "y2": -35.0
+            },
+            {
+              "type": "segment",
+              "x1": 10.0,
+              "y1": -35.0,
+              "x2": 10.0,
+              "y2": -50.0
+            },
+            {
+              "type": "segment",
+              "x1": 10.0,
+              "y1": -50.0,
+              "x2": -10.0,
+              "y2": -50.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_note": "真实 QFN 样本（CSV 仅取 x,y,rotation；不含 textOffset）",
+      "pin_number": 88,
+      "padstack": "SMD32_8OB-S4",
+      "x": -195.67,
+      "y": -165.35,
+      "rotation": 0,
+      "figure_type": "OBLONG_X",
+      "width": 32.0,
+      "height": 8.0
+    },
+    {
+      "pin_number": 89,
+      "padstack": "SMD323_323-TNP",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "figure_type": "RECTANGLE",
+      "width": 323.0,
+      "height": 323.0
+    },
+    {
+      "_note": "内联写法示例",
+      "pin_number": "inline_demo",
+      "padstack": "PS_INLINE",
+      "x": 300,
+      "y": 100,
+      "rotation": 45,
+      "figure_type": "SHAPE",
+      "shape_name": "inline_thermal",
+      "shapes": [
+        {
+          "shape": [
+            {
+              "type": "polygon",
+              "points": "-30,-30;30,-30;30,30;-30,30"
+            }
+          ],
+          "void": [
+            {
+              "type": "polygon",
+              "points": "-10,-10;10,-10;10,10;-10,10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

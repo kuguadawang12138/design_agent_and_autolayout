@@ -1,0 +1,285 @@
+封装形状还原 — 行业参考、KiCad 对照、Allegro 对齐、导出字段建议
+（给算法组 / 领导调研用，2026-08-11）
+
+================================================================================
+一、行业里「按形状还原再比对」有没有现成网站/文档？
+================================================================================
+
+结论：没有一家「Allegro 专用、开箱即用」的公开网站；但有几类可验证的参考：
+
+【A. 行业标准 — 焊盘形状怎么「算」出来（不是比对，是生成公式）】
+
+  IPC-7351B（当前正式版）— 焊盘/land pattern 尺寸公式与形状建议
+  官方购买：https://shop.ipc.org/
+  内容预览/导读（非官方，但引用了标准）：https://pcbsync.com/ipc-7351/
+
+  要点：标准封装焊盘多用 Oblong/矩形；圆角矩形在 IPC-7351C 草案里
+        角半径 = 25% × land 宽度（该 C 版未正式发布，但很多库已采用）
+  论坛讨论（PCB Libraries 官方论坛）：https://www.pcblibraries.com/forum/ipc7351-and-smd-pad-shapes_topic2590.html
+
+【B. 商业建库 — 按标准生成矢量焊盘（不是相似度搜索）】
+
+  Ultra Librarian / PCB Libraries — 按 IPC + datasheet 生成 footprint
+  https://www.ultralibrarian.com/
+  说明：内部是参数化几何 + 校验，不是「和历史库比 IoU」
+
+【C. 开源 — 用铜箔多边形 IoU 比 footprint（最接近我们要做的）】
+
+  tscircuit / circuit-json-to-footprinter（MIT，2025–2026 活跃）
+  GitHub：https://github.com/tscircuit/circuit-json-to-footprinter
+  在线 Demo：https://fast-footprint-compare.vercel.app/
+  说明：把 pad 还原成 2D 铜区，用 boolean 交并集算 copper IoU（不依赖像素分辨率）
+        这是目前开源里和「形状还原 + 相似度」最接近的实现
+
+【D. KiCad 官方 — 封装 diff / 形状转多边形（见第二节）】
+
+  PCB Editor 文档：https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html
+  源码镜像：https://gitlab.com/kicad/code/kicad
+
+【E. Cadence Allegro 官方社区 — 几何导出（无公开「相似度算法」文档）】
+
+  Extracta 从 .dra 导 FULL_GEOMETRY / pin：
+  https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/16135/dra-file-in-ascii-format
+
+  Padstack 报告 report -v pad：
+  https://community.cadence.com/cadence_technology_forums/pcb-design/f/pcb-design/17213/padstack-management
+
+  Pad 几何类型 figureName（SKILL）：
+  https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-scripting-skill/41453/how-do-i-get-a-pad-geometry
+
+  Shape 转多边形顶点 axlPolyFromDB：
+  https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-scripting-skill/41225/decompose-shape-using-skill
+
+
+================================================================================
+二、KiCad 开源项目是怎么做的？（领导让重点看这块）
+================================================================================
+
+【纠正一个误解】
+  KiCad 并不是「只用点坐标做封装相似度搜索」。
+  它分好几层用途：
+
+  (1) 封装对齐 / 换封装时算平移旋转 — 用「同 pin 号的焊盘中心点」
+      源码：pcbnew/footprint_utils.cpp → ComputeFootprintShift
+      官方 Doxygen：https://docs.kicad.org/doxygen/footprint__utils_8cpp_source.html
+      逻辑：找两个 footprint 里 pin 号唯一且相同的 pad，取中心坐标，
+            算旋转+平移变换（ORTHOGONAL alignment）。这是点集对齐，不是最终 diff。
+
+  (2) 封装与库对比（工程师看的 UI）— 「形状叠加可视化」
+      官方文档：Inspect → Compare Footprint With Library
+      https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html
+      说明：把板上的 footprint 和库里 footprint 半透明叠在一起给人眼看，
+            不是自动算一个相似度分数给百万库检索。
+
+  (3) 真正把 pad 还原成形状 — TransformShapeToPolygon
+      源码：pcbnew/pad.cpp → PAD::TransformShapeToPolygon
+      官方 Doxygen：https://docs.kicad.org/doxygen/pad_8cpp_source.html
+
+      标准 pad（圆/椭圆/矩/圆角矩/梯形）：
+        · 圆 → TransformCircleToPolygon（圆折线化）
+        · 圆角矩形 → TransformRoundChamferedRectToPolygon（角半径参数）
+        · 参数来自 padstack 的 Size、CornerRadius 等
+
+      自定义 pad（CUSTOM）：
+        · 官方定义（padstack.h + 用户手册 Pad Edit Mode）由 basic shapes 组成：
+          粗线段（segment）、圆（circle）、圆弧（arc）、多边形（polygon/rect）
+        · 不含 Bezier：Bezier 是封装/板级「图形对象」工具，不是 CUSTOM 焊盘
+          官方列出的 primitive 类型（见 padstack.h 注释与论坛 Pad Edit 说明）
+        · MergePrimitivesAsPolygon() 合并成 SHAPE_POLY_SET 多边形
+        · Python API：GetCustomShapeAsPolygon / AddPrimitiveArc 等
+          https://docs.kicad.org/doxygen-python-10.0/classpcbnew_1_1PAD.html
+        · 注：Doxygen 的 AddPrimitivePoly 注释曾写 bezier，与官方用户文档不一致；
+          对外沟通以用户手册为准；Allegro 异形 pad 同样为 line+arc，无 Bezier
+
+  (4) 圆弧/曲边怎么画 — 不是存「公式」，而是折线逼近
+      源码：convert_basic_shapes_to_polygon.cpp
+      官方：https://docs.kicad.org/doxygen/convert__basic__shapes__to__polygon_8cpp.html
+      函数：ConvertArcToPolyline、TransformArcToPolygon
+      输入：圆弧起点、中点、终点（或圆心+起止角）
+      输出：一串直线段；允许误差 aMaxError（默认约 0.005mm）
+      官方用户文档说明：
+      https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html
+      「Arc/circle approximated by segments」
+
+  (5) 库目录 diff — FP_LIB_DIFFER
+      按 footprint 文件名对比两个 .pretty 目录，不是几何 IoU 检索
+      https://docs.kicad.org/doxygen/classKICAD__DIFF_1_1FP__LIB__DIFFER.html
+
+【KiCad 对我们方案的启示】
+
+  · 比对前先对齐：同 pin 号中心点算旋转/平移（我们已在 Demo 里做）
+  · 形状比对统一走「多边形」：所有 pad 先 TransformShapeToPolygon
+  · 圆弧/曲边：用有限线段逼近（控制 max_error），两边用同一误差
+  · 自定义 pad：存 primitive 列表（segment/arc/poly），合并再比
+  · 开源新方向 tscircuit：多边形 boolean IoU，比栅格像素 IoU 更稳
+
+
+================================================================================
+三、异形 / 曲边焊盘是怎么构成的？有没有公式？
+================================================================================
+
+【标准形状 — 参数公式（宽、高、半径）】
+
+  矩形：4 个角点，由 (cx,cy,w,h,rotation) 决定
+  圆形：圆心 + 半径
+  长圆（Oblong）：两圆 + 中间矩形，或 Allegro 的 OBLONG_X / OBLONG_Y + 宽高
+  圆角矩形（IPC 建议）：矩形 + corner_radius（IPC-7351C 草案：R = 25% × 短边宽）
+  倒角矩形（Chamfered）：矩形 + 切角比例
+
+  → 这些不需要导出顶点，导出 figure_type + width + height +（可选）corner_radius 即可
+
+【曲边 / 圆弧 — 两种行业做法】
+
+  做法 1（KiCad / 大多数 EDA 渲染与 DRC）：
+    存圆弧的控制点（起点、终点、圆心 或 起点、中点、终点）
+    显示/比对时：按最大弦高误差 ε 拆成 N 段直线
+    公式：给定半径 R、圆心角 θ，分段数 N ≈ ceil(θ / (2×arccos(1 - ε/R)))
+    不要求存储 N 个顶点，运行时生成
+
+  做法 2（复杂异形 Shape / Flash）：
+    存闭合多边形顶点序列 (x1,y1)(x2,y2)… 或 线段+圆弧 primitive 列表
+    Allegro SKILL：axlPolyFromDB(shape) → vertices
+    KiCad CUSTOM pad：AddPrimitiveSegment / AddPrimitiveArc / AddPrimitivePoly
+
+【Allegro 侧常见 figureName（SKILL 可读）】
+
+  CIRCLE, SQUARE, RECTANGLE, OBLONG_X, OBLONG_Y,
+  ROUNDED_RECTANGLE, CHAMFERED_RECTANGLE, OCTAGON, DONUT,
+  以及 Flash/Shape 引用（异形）
+
+  参考（Cadence 社区实测 SKILL）：
+  https://community.cadence.com/.../59201/extracting-pad-stack-information-through-skill-scripting
+
+
+================================================================================
+四、Allegro 是怎么「还原形状」的？Python 要怎么对齐？
+================================================================================
+
+【Allegro 内部逻辑（从官方社区 + 数据格式归纳）】
+
+  每个 Pin：
+    位置 (x,y) + rotation + padstack 名
+  每个 Padstack（.pad）：
+    每层有 Figure 类型 + Width/Height（或直径）
+    若是 Flash/Shape：指向 .ssm/.fsm 等 shape 符号，内部是 segment/arc 链
+
+  渲染/DRC 时：把 Figure 实例化到 pin 的坐标系（平移+旋转），再光栅或布尔运算
+
+【Python 对齐 Allegro 的推荐分层（与设计部导出字段一一对应）】
+
+  第 1 层 — 标准 pad（预计 90%+）：
+    输入：pin_csv + padstack_library（figure, w, h, rotation）
+    还原：与 Allegro figureName 同类的 parametric 图形
+    圆角/倒角：若有 corner_radius/chamfer 字段则按 KiCad 同类公式折线化
+
+  第 2 层 — Flash/Shape 异形 pad：
+    输入：shape_name + 顶点 CSV 或 WKT/SVG path primitive 列表
+    来源：Extracta FULL_GEOMETRY 或 SKILL axlPolyFromDB 批量导出
+    还原：直接按顶点/segment/arc 列表 tessellate 后合并多边形
+
+  第 3 层 — 比对：
+    与 KiCad / tscircuit 一致：全部 pad 合并 → 对齐（质心+旋转+pin号）→ 多边形 IoU
+    圆弧 tessellation 统一 max_error = 0.005mm（与 KiCad 默认同量级）
+
+  我们现有 Demo（1190967）= 第 1 层 Mock；正式 = 第 1 层真实库表 + 第 2 层按需
+
+
+================================================================================
+五、和设计部确认后建议导出的字段（定稿版）
+================================================================================
+
+【文件 1】引脚表 — 每个封装一个 CSV（已有，继续）
+
+  必需字段：
+    PinNumber, Padstack, x, y, rotation
+    Units（文件头 Units,mils）
+
+【文件 2】Padstack 库表 — 全公司一张 CSV（新增）
+
+  必需（标准 pad）：
+    padstack_name
+    figure_type          — 与 Allegro 一致：CIRCLE/RECTANGLE/OBLONG_X/OBLONG_Y/
+                           ROUNDED_RECTANGLE/CHAMFERED_RECTANGLE/FLASH/SHAPE 等
+    width_mils
+    height_mils
+    layer                — 建议填 TOP（比对用顶层铜）
+
+  建议有（提高精度）：
+    corner_radius_mils   — 圆角矩形
+    chamfer_ratio        — 倒角矩形
+    flash_shape_name     — 异形时填关联 shape 名
+
+  可选：
+    notes, export_date
+
+【文件 3】Shape 顶点表 — 仅异形 pad 需要（阶段 2，可先试导样例）
+
+  建议字段：
+    shape_name           — 与 flash_shape_name 对应
+    primitive_type       — segment / arc / poly
+    x1,y1,x2,y2          — segment
+    或 arc_start_x,y / arc_mid_x,y / arc_end_x,y   — arc（与 KiCad 三点弧一致）
+    或 poly_points       — 多边形顶点序列 "x1:y1;x2:y2;..."
+
+  导出途径（EDA 同事二选一试）：
+    · Extracta .dra + FULL_GEOMETRY
+    · SKILL axlPolyFromDB 批量写 CSV
+
+【文件 4】封装元数据（已有 xlsx 可继续）
+
+    packageSymbol, pins, boardName, …
+
+【暂不需要】
+
+    封装预览 BMP（仅 UI）；.psm 二进制；完整 .dra 二进制
+
+
+================================================================================
+六、建议调研顺序（给领导汇报用）
+================================================================================
+
+  1. 打开 KiCad 文档「Compare Footprint With Library」看 UI 叠加 diff
+     https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html
+
+  2. 看 KiCad 源码 pad.cpp 里 TransformShapeToPolygon（形状还原核心）
+     https://docs.kicad.org/doxygen/pad_8cpp_source.html
+
+  3. 看 tscircuit 开源 copper IoU 实现（最接近我们要的自动打分）
+     https://github.com/tscircuit/circuit-json-to-footprinter
+
+  4. 让设计部按第五节字段试导 1 个标准 QFN + 1 个含异形 pad 的 padstack/shape
+
+  5. 算法组用同一份数据，Python 按 KiCad 同款「多边形 + IoU」实现 v2
+
+
+================================================================================
+七、链接汇总（可复制到浏览器）
+================================================================================
+
+KiCad 官方
+  PCB Editor 文档          https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html
+  pad 形状转多边形源码      https://docs.kicad.org/doxygen/pad_8cpp_source.html
+  圆弧折线化源码            https://docs.kicad.org/doxygen/convert__basic__shapes__to__polygon_8cpp.html
+  footprint 对齐源码        https://docs.kicad.org/doxygen/footprint__utils_8cpp_source.html
+  KiCad 主仓库              https://gitlab.com/kicad/code/kicad
+
+Cadence Allegro 社区（官方）
+  .dra Extracta 导 pin      https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/16135/dra-file-in-ascii-format
+  report -v pad             https://community.cadence.com/cadence_technology_forums/pcb-design/f/pcb-design/17213/padstack-management
+  pad figureName SKILL      https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-scripting-skill/41453/how-do-i-get-a-pad-geometry
+  shape 顶点 axlPolyFromDB  https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-scripting-skill/41225/decompose-shape-using-skill
+
+行业标准 / 商业
+  IPC 官方商店              https://shop.ipc.org/
+  IPC-7351 导读             https://pcbsync.com/ipc-7351/
+  PCB Libraries 论坛        https://www.pcblibraries.com/forum/ipc7351-and-smd-pad-shapes_topic2590.html
+
+开源形状 IoU 参考
+  circuit-json-to-footprinter  https://github.com/tscircuit/circuit-json-to-footprinter
+  在线 Demo                    https://fast-footprint-compare.vercel.app/
+
+本项目 Demo 输出
+  data/1190967/output/svg/     形状还原 SVG
+  data/1190967/padstack_library.csv   Mock 库表
+
+================================================================================
