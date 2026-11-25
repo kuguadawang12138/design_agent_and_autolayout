@@ -1,0 +1,4 @@
+# 复制为 deploy_env.yaml（检索服务必配，须与入库 deploy_env.yaml 的 env 一致）
+# 仅控制加载 footprint_sim_prd.yaml 或 footprint_sim_st.yaml
+
+env: prd

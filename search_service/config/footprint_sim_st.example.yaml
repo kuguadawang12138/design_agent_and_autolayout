@@ -1,0 +1,61 @@
+# 复制为 footprint_sim_st.yaml；与入库 footprint_sim_st.yaml 使用同一 mysql.database
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: root
+  database: footprint_sim
+
+agent_paths:
+  sessions: data/sessions
+  logs: data/logs
+
+agent:
+  session_ttl_days: 7
+  rerank_top_n: 10
+  llm_intent_enabled: true
+
+llm:
+  enabled: false
+  base_url: http://127.0.0.1:11434/v1
+  chat_path: /chat/completions
+  model: qwen2.5
+  api_key: ""
+  timeout_sec: 120
+  temperature: 0.1
+  max_tokens: 2048
+  json_mode: true
+  reply_enabled: false
+  disable_thinking: true
+  extra_body: {}
+  intent_history_turns: 4
+  rank_max_candidates: 20
+
+similarity:
+  pin_filter: true
+  min_iou: 0.8
+  top_k: 500
+  exclude_self: true
+  # 初筛面积允许相对浮动。0.10 表示查询面积的 ±10%（面积已换算成 mils²）
+  area_tolerance: 0.10
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  uvicorn_workers: 1
+
+concurrency:
+  total_cpu_cores: 128
+  reserved_cpu_cores: 48
+  max_concurrent_similar: 10
+  iou_workers_per_request: 0
+  iou_pool_max_workers: 0
+
+minio:
+  enabled: false
+  endpoint: 127.0.0.1:9000
+  access_key: minioadmin
+  secret_key: minioadmin
+  bucket: footprint
+  secure: false

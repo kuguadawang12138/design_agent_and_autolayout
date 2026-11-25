@@ -1,0 +1,69 @@
+# 复制为 footprint_sim_prd.yaml；mysql 须与入库服务 footprint_sim_prd.yaml 一致
+
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: root
+  database: footprint_sim
+
+agent_paths:
+  sessions: data/sessions
+  logs: data/logs
+
+agent:
+  session_ttl_days: 7
+  rerank_top_n: 10
+  # 规则识别不出位号时是否再调 LLM 理解意图（false=直接追问，全程只在排序时调一次 LLM）
+  llm_intent_enabled: true
+
+llm:
+  enabled: false
+  base_url: http://127.0.0.1:11434/v1
+  chat_path: /chat/completions
+  model: qwen2.5
+  api_key: ""
+  timeout_sec: 120
+  temperature: 0.1
+  max_tokens: 2048
+  json_mode: true
+  reply_enabled: false
+  # 思考型模型（Qwen3/R1/QwQ）会把 max_tokens 花在思考上导致正文为空（finish_reason=length）
+  # true：请求体加 chat_template_kwargs.enable_thinking=false + 提示词末尾 /no_think
+  disable_thinking: true
+  # 不同推理框架关思考字段不同，可在此原样并入请求体，例如：
+  # extra_body: { enable_thinking: false }            # DashScope
+  # extra_body: { think: false }                      # Ollama 原生
+  extra_body: {}
+  # 意图提示词携带的近期对话条数（越少越省 token）
+  intent_history_turns: 4
+  # 形态 IoU 排好序后最多交给 LLM 排序的候选数（与 similarity.top_k 配合）
+  rank_max_candidates: 20
+
+similarity:
+  pin_filter: true
+  min_iou: 0.8
+  top_k: 500
+  exclude_self: true
+  # 初筛面积允许相对浮动。0.10 表示查询面积的 ±10%（面积已换算成 mils²）
+  area_tolerance: 0.10
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  uvicorn_workers: 1
+
+concurrency:
+  total_cpu_cores: 128
+  reserved_cpu_cores: 48
+  max_concurrent_similar: 10
+  iou_workers_per_request: 0
+  iou_pool_max_workers: 0
+
+minio:
+  enabled: false
+  endpoint: 127.0.0.1:9000
+  access_key: minioadmin
+  secret_key: minioadmin
+  bucket: footprint
+  secure: false
